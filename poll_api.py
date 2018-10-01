@@ -25,4 +25,8 @@ def get_buses_on_route(route):
 
 
 if __name__ == "__main__":
-    pprint.pprint(get_buses_on_route(639))
+    b = get_buses_on_route(639)
+    print(type(b))
+    print(type(b[0]))
+    print(b[0]['lastStop'])
+    pprint.pprint(b)
