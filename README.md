@@ -11,4 +11,4 @@ and formatted to display all desired information in a nice presentable manner.
 [`poll_api.py`](poll_api.py) contains functions to request various inforamtion from the DoubleMap API. These functions
 are used by `BusTracker`.
 
-[`Infrastructure Notes`](infrastructure_notes.txt) contains the IP of our remote server.
+[`infrastructure_notes.txt`](infrastructure_notes.txt) contains the IP of our remote server.
