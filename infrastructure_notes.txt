@@ -1,3 +1,3 @@
-ubuntu@176.26.3.236
+ubuntu@35.168.221.32
 
 Server requires key to login. Pleae ask Chris if access is required. 
