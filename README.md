@@ -1,5 +1,10 @@
 # SeeBus
 
+## Steps to Run
+All of the backend python code can be downloaded and ran (with the appropriate modules installed).
+
+You can go to our website by visiting the IP directly [`http://35.168.221.32`](http://35.168.221.32).
+
 ## Current Status
 Currently, 2 classes, [`Bus.py`](Bus.py) and [`BusTracker.py`](BusTracker.py) successfully poll the API and show information.
 
