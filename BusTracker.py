@@ -7,11 +7,11 @@ import pprint
 class BusTracker:
 
     def __init__(self, delay=3):
-        self.buses = []
-        self.delay = delay
+        self.__buses = []
+        self.__delay = delay
 
     def update_buses(self):
-        self.buses = []
+        self.__buses = []
         bus_dict = api.get_buses()
         for bus in bus_dict:
             id = bus['id']
@@ -23,17 +23,17 @@ class BusTracker:
             last_update = bus['lastUpdate']
             b = Bus.Bus(id, name=name, route=route, location=location, heading=heading,
                         last_stop=last_stop, last_update=last_update)
-            self.buses.append(b)
+            self.__buses.append(b)
 
     def loop(self):
         while True:
             self.update_buses()
-            pprint.pprint(self.buses)
-            print(len(self.buses))
-            time.sleep(self.delay)
+            pprint.pprint(self.__buses)
+            print(len(self.__buses))
+            time.sleep(self.__delay)
 
     def get_buses(self):
-        return self.buses
+        return self.__buses
 
 
 if __name__ == '__main__':

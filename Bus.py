@@ -2,62 +2,62 @@ class Bus:
 
     def __init__(self, id, name=None, route=None, location=None, heading=None, speed=None,
                  last_stop=None, last_update=None):
-        self.id = id
-        self.name = name
-        self.route = route
-        self.location = location
-        self.heading = heading
-        self.speed = speed
-        self.last_stop = last_stop
-        self.last_update = last_update
+        self.__id = id
+        self.__name = name
+        self.__route = route
+        self.__location = location
+        self.__heading = heading
+        self.__speed = speed
+        self.__last_stop = last_stop
+        self.__last_update = last_update
 
     def set_id(self, id):
-        self.id = id
+        self.__id = id
 
     def get_id(self):
-        return self.id
+        return self.__id
 
     def set_name(self, name):
-        self.name = name
+        self.__name = name
 
     def get_name(self):
-        return self.name
+        return self.__name
 
     def set_route(self, route):
-        self.route = route
+        self.__route = route
 
     def get_route(self):
-        return self.route
+        return self.__route
 
     def set_location(self, location):
-        self.location = location
+        self.__location = location
 
     def get_location(self):
-        return self.location
+        return self.__location
 
     def set_heading(self, heading):
-        self.heading = heading
+        self.__heading = heading
 
     def get_heading(self):
-        return self.heading
+        return self.__heading
 
     def set_speed(self, speed):
-        self.speed = speed
+        self.__speed = speed
 
     def get_speed(self):
-        return self.speed
+        return self.__speed
 
     def set_last_stop(self, last_stop):
-        self.last_stop = last_stop
+        self.__last_stop = last_stop
 
     def get_last_stop(self):
-        return self.last_stop
+        return self.__last_stop
 
     def set_last_update(self, last_update):
-        self.last_update = last_update
+        self.__last_update = last_update
 
     def get_last_update(self):
-        return self.last_update
+        return self.__last_update
 
     def __repr__(self):
         return "{{\n" \
@@ -70,5 +70,5 @@ class Bus:
                "  Last Stop:   {}\n" \
                "  Last Update: {}\n" \
                " }}".format(
-                        self.id, self.name, self.route, self.location[0], self.location[1],
-                        self.heading, self.speed, self.last_stop, self.last_update)
+                        self.__id, self.__name, self.__route, self.__location[0], self.__location[1],
+                        self.__heading, self.__speed, self.__last_stop, self.__last_update)
