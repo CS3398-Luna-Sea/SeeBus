@@ -71,4 +71,5 @@ class Bus:
                "  Last Update: {}\n" \
                " }}".format(
                         self.__id, self.__name, self.__route, self.__location[0], self.__location[1],
-                        self.__heading, self.__speed, self.__last_stop, self.__last_update)
+                        self.__heading, self.__speed, self.__last_stop, self.__last_update
+        )

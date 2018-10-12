@@ -25,5 +25,5 @@ def get_buses_on_route(route):
 
 
 if __name__ == "__main__":
-    b = get_buses_on_route(639)
-    pprint.pprint(b)
+    buses = get_buses()
+    pprint.pprint(buses)

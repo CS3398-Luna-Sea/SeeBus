@@ -19,9 +19,10 @@ class BusTracker:
             route = bus['route']
             location = (bus['lat'], bus['lon'])
             heading = bus['heading']
+            speed = -1
             last_stop = bus['lastStop']
             last_update = bus['lastUpdate']
-            b = Bus.Bus(id, name=name, route=route, location=location, heading=heading,
+            b = Bus.Bus(id, name=name, route=route, location=location, heading=heading, speed=speed,
                         last_stop=last_stop, last_update=last_update)
             self.__buses.append(b)
 
