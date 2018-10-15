@@ -80,6 +80,9 @@ class Bus:
     def get_last_update(self):
         return self.__last_update
 
+    def is_stopped(self):
+        return self.__heading == 0 or self.__speed < 0.5
+
     def __repr__(self):
         return "{{\n" \
                "  ID:          {}\n" \
