@@ -1,5 +1,4 @@
 import BusTracker
-import Bus
 import time
 
 
@@ -14,13 +13,15 @@ class DisplayCommandLine:
     def loop(self):
         while True:
             self.__bt.update_buses()
+            self.__bt.calculate_speeds()
             DisplayCommandLine.__display_buses(self.__bt.get_buses())
 
     @staticmethod
     def bus_format_table(bus):
-        return "| {:3d} | {:5d} | {:2.2f}, {:2.2f} | {:7d} | {:5d} | {:9d} | {:11d} |".format(
+        speed_str = ('{: >5.2f}'.format(bus.get_speed()) if bus.get_speed() != -1 else '     ')
+        return "| {:3d} | {:5d} | {:2.2f}, {:2.2f} | {:7d} | {:s} | {:9d} | {:11d} |".format(
             bus.get_id(), bus.get_route(), bus.get_location()[0], bus.get_location()[1], bus.get_heading(),
-            bus.get_speed(), bus.get_last_stop(), bus.get_last_update()
+            speed_str, bus.get_last_stop(), bus.get_last_update()
         )
 
     @staticmethod
