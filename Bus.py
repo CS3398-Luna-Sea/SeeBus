@@ -1,3 +1,6 @@
+import time
+
+
 class Bus:
 
     def __init__(self, id, name=None, route=None, location=None, heading=None, speed=None,
@@ -79,6 +82,9 @@ class Bus:
 
     def get_last_update(self):
         return self.__last_update
+
+    def get_time_since_last_update(self):
+        return int(time.time() - self.__last_update)
 
     def is_stopped(self):
         return self.__heading == 0 or self.__speed < 0.5
