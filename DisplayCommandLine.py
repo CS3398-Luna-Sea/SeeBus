@@ -19,9 +19,9 @@ class DisplayCommandLine:
     @staticmethod
     def bus_format_table(bus):
         speed_str = ('{: >5.2f}'.format(bus.get_speed()) if bus.get_speed() != -1 else '     ')
-        return "| {:3d} | {:5d} | {:2.2f}, {:2.2f} | {:7d} | {:s} | {:9d} | {:11d} |".format(
-            bus.get_id(), bus.get_route(), bus.get_location()[0], bus.get_location()[1], bus.get_heading(),
-            speed_str, bus.get_last_stop(), bus.get_last_update()
+        return "| {:3d} | {:5d} | {:2.2f}, {:2.2f} | {:>2s}  {:3d} | {:s} | {:9d} | {:11d} |".format(
+            bus.get_id(), bus.get_route(), bus.get_location()[0], bus.get_location()[1], bus.get_heading_cardinal(),
+            bus.get_heading(), speed_str, bus.get_last_stop(), bus.get_last_update()
         )
 
     @staticmethod

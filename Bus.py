@@ -41,6 +41,27 @@ class Bus:
     def get_heading(self):
         return self.__heading
 
+    def get_heading_cardinal(self):
+        a = self.get_heading()
+        if a == 0:
+            return ''
+        elif 22.5 < a <= 67.5:
+            return 'NE'
+        elif 67.5 < a <= 112.5:
+            return 'E'
+        elif 112.5 < a <= 157.5:
+            return 'SE'
+        elif 157.5 < a <= 202.5:
+            return 'S'
+        elif 202.5 < a <= 247.5:
+            return 'SW'
+        elif 247.5 < a <= 292.5:
+            return 'W'
+        elif 292.5 < a <= 337.5:
+            return 'NW'
+        elif 337.5 < a < 360 or 0 < a <= 22.5:
+            return 'N'
+
     def set_speed(self, speed):
         self.__speed = speed
 
