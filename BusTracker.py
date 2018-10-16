@@ -16,6 +16,9 @@ class BusTracker:
         self.__prev = self.__buses
         self.__buses = []
         bus_dict = api.get_buses()
+
+        # bus_dict = api.get_buses_on_route(633)
+
         for bus in bus_dict:
             id = bus['id']
             name = bus['name']
