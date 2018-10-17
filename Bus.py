@@ -3,8 +3,18 @@ import time
 
 class Bus:
 
-    def __init__(self, id, name=None, route=None, location=None, heading=None, speed=None,
-                 last_stop=None, last_update=None):
+    def __init__(self, id, name, route, location, heading, speed, last_stop, last_update):
+        """
+        Creates a bus object initializing all fields.
+        :param id: Integer ID of the bus.
+        :param name: String name of the bus.
+        :param route: Integer route of the bus.
+        :param location: Location of the bus, tuple of float: latitude and longitude.
+        :param heading: Integer heading of the bus.
+        :param speed: Float speed of the bus in MPH.
+        :param last_stop: Integer last stop of the bus.
+        :param last_update: Unix timestamp of last time the bus was updated.
+        """
         self.__id = id
         self.__name = name
         self.__route = route
@@ -14,37 +24,46 @@ class Bus:
         self.__last_stop = last_stop
         self.__last_update = last_update
 
-    def set_id(self, id):
-        self.__id = id
-
     def get_id(self):
+        """
+        Gets the integer ID of the bus.
+        :return: The ID of the bus.
+        """
         return self.__id
 
-    def set_name(self, name):
-        self.__name = name
-
     def get_name(self):
+        """
+        Gets the string name of the bus.
+        :return: The name of the bus.
+        """
         return self.__name
 
-    def set_route(self, route):
-        self.__route = route
-
     def get_route(self):
+        """
+        Gets the integer route of the bus.
+        :return: The route of the bus.
+        """
         return self.__route
 
-    def set_location(self, location):
-        self.__location = location
-
     def get_location(self):
+        """
+        Gets the location of the bus, tuple of floats.
+        :return: The location of the bus.
+        """
         return self.__location
 
-    def set_heading(self, heading):
-        self.__heading = heading
-
     def get_heading(self):
+        """
+        Gets the integer heading of the bus.
+        :return: The heading of the bus.
+        """
         return self.__heading
 
     def get_heading_cardinal(self):
+        """
+        Converts the integer heading (0-360) to a cardinal direction (N, NE, E, SE, etc).
+        :return: The cardinal direction the bus is driving.
+        """
         a = self.get_heading()
         if a == 0:
             return ''
@@ -66,30 +85,52 @@ class Bus:
             return 'N'
 
     def set_speed(self, speed):
+        """
+        Sets the speed of the bus.
+        :param speed: The speed in MPH.
+        """
         self.__speed = speed
 
     def get_speed(self):
+        """
+        Gets the float speed of the bus.
+        :return: The speed of the bus.
+        """
         return self.__speed
 
-    def set_last_stop(self, last_stop):
-        self.__last_stop = last_stop
-
     def get_last_stop(self):
+        """
+        Gets the integer last stop of the bus.
+        :return: The last stop of the bus.
+        """
         return self.__last_stop
 
-    def set_last_update(self, last_update):
-        self.__last_update = last_update
-
     def get_last_update(self):
+        """
+        Gets the unix timestamp corresponding to when the bus was last updated in the API.
+        :return: The last time the bus was updated.
+        """
         return self.__last_update
 
     def get_time_since_last_update(self):
+        """
+        Converts the last_update field to time since last update by getting the difference from the current time.
+        :return: The number of seconds since the bus was last updated.
+        """
         return int(time.time() - self.__last_update)
 
     def is_stopped(self):
+        """
+        Sees if the bus is currently not moving.
+        :return: True if the bus is stopped, false otherwise.
+        """
         return self.__heading == 0 or self.__speed < 0.5
 
     def __repr__(self):
+        """
+        Converts a Bus object to a string.
+        :return: A string containing all fields of the bus in a formatted manner.
+        """
         return "{{\n" \
                "  ID:          {}\n" \
                "  Name:        {}\n" \

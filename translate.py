@@ -34,7 +34,7 @@ route_id_dict = {
         'type': 'Evening',
         'name':'Aquarena/Blanco'
     },
-    621: {
+    620: {
         'txst id': 30,
         'type': 'Special',
         'name': 'Pathways'
@@ -134,6 +134,9 @@ stop_id_dict = {
     13: {
         'name': 'Hillside Ranch'
     },
+    14: {
+        'name': 'Kyle ACC'
+    },
     15: {
         'name': 'Lantana'
     },
@@ -222,7 +225,6 @@ stop_id_dict = {
 
 # Fenway Loop
 # Highcrest
-# Kyle ACC
 # Prime Outlet
 # Target
 # The Grove

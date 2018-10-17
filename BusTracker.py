@@ -8,11 +8,19 @@ from geopy.distance import geodesic
 class BusTracker:
 
     def __init__(self, delay=3):
+        """
+        Creates a BusTracker object initializing all fields.
+        :param delay: The time between polling the API.
+        """
         self.__buses = []
         self.__prev = []
         self.__delay = delay
 
     def update_buses(self):
+        """
+        Polls the API and creates and adds Bus objects to the current bus list. Puts the buses in the current list to
+        the previous bus list. Then sorts the current list by Bus ID.
+        """
         self.__prev = self.__buses
         self.__buses = []
         bus_dict = api.get_buses()
@@ -31,9 +39,14 @@ class BusTracker:
             b = Bus.Bus(id, name=name, route=route, location=location, heading=heading, speed=speed,
                         last_stop=last_stop, last_update=last_update)
             self.__buses.append(b)
+
         self.__buses.sort(key=lambda x: x.get_id())
+        self.calculate_speeds()
 
     def loop(self):
+        """
+        Continuously updated the buses, prints them and how many there are, then delays before looping again.
+        """
         while True:
             self.update_buses()
             pprint.pprint(self.__buses)
@@ -41,6 +54,9 @@ class BusTracker:
             time.sleep(self.__delay)
 
     def calculate_speeds(self):
+        """
+        Updated the speeds of all buses based on their change in distance/time.
+        """
         for i, (prev, curr) in enumerate(list(zip(self.__prev, self.__buses))):
 
             prev_location = (prev.get_location()[0], prev.get_location()[1])
@@ -57,7 +73,13 @@ class BusTracker:
                 self.__buses[i].set_speed(self.__prev[i].get_speed())
 
     def get_buses(self):
+        """
+        Returns the current list of buses.
+        """
         return self.__buses
+
+    def get_delay(self):
+        return self.__delay
 
 
 if __name__ == '__main__':
