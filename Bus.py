@@ -126,6 +126,18 @@ class Bus:
         """
         return self.__heading == 0 or self.__speed < 0.5
 
+    def to_dict(self):
+        return {
+            'id': self.__id,
+            'name': self.__name,
+            'route': self.__route,
+            'location': self.__location,
+            'heading': self.__heading,
+            'speed': self.__speed,
+            'last_stop': self.__last_stop,
+            'last_update': self.__last_update
+        }
+
     def __repr__(self):
         """
         Converts a Bus object to a string.
