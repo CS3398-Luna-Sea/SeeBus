@@ -1,3 +1,4 @@
+import translate
 import time
 
 
@@ -45,6 +46,24 @@ class Bus:
         """
         return self.__route
 
+    @staticmethod
+    def route_id_to_dict(route_id):
+        """
+        Converts a route id to a dictionary containing information about it.
+        :param route_id: The ID of the route from the DoubleMap API.
+        :return: A dictionary containing information about the route ID.
+        """
+        try:
+            return translate.route_id_dict[route_id]
+        except KeyError:
+            with open('missing.txt', 'w+') as f:
+                f.write('Missing route'.format(route_id))
+            return {
+                'txst id': '',
+                'type': '',
+                'name': ''
+            }
+
     def get_location(self):
         """
         Gets the location of the bus, tuple of floats.
@@ -59,12 +78,14 @@ class Bus:
         """
         return self.__heading
 
-    def get_heading_cardinal(self):
+    @staticmethod
+    def get_heading_cardinal(heading):
         """
         Converts the integer heading (0-360) to a cardinal direction (N, NE, E, SE, etc).
+        :param heading: The integer heading of a bus, 0-360 degrees.
         :return: The cardinal direction the bus is driving.
         """
-        a = self.get_heading()
+        a = heading
         if a == 0:
             return ''
         elif 22.5 < a <= 67.5:
@@ -98,12 +119,47 @@ class Bus:
         """
         return self.__speed
 
+    def is_stopped(self):
+        """
+        Sees if the bus is currently not moving.
+        :return: True if the bus is stopped, false otherwise.
+        """
+        return self.__heading == 0 or self.__speed < 0.5
+
+    @staticmethod
+    def validate_speed(speed):
+        """
+        Checks the speed of a bus and returns an alternate value if it doesn't make sense.
+        :param speed: The speed to validate.
+        :return: A validated speed integer.
+        """
+        if speed != -1 and abs(speed) < 100:
+            return '{: >5.2f}'.format(speed)
+        else:
+            return '     '
+
     def get_last_stop(self):
         """
         Gets the integer last stop of the bus.
         :return: The last stop of the bus.
         """
         return self.__last_stop
+
+    @staticmethod
+    def stop_id_to_dict(stop_id):
+        """
+        Converts a stop id to a dictionary containing information about it.
+        :param stop_id: The ID of the stop from the DoubleMap API.
+        :return: A dictionary containing information about the stop ID.
+        """
+        try:
+            return translate.stop_id_dict[stop_id]
+        except KeyError:
+            with open('missing.txt', 'w+') as f:
+                f.write('Missing stop {}'.format(stop_id))
+            return {
+                'name': ''
+            }
 
     def get_last_update(self):
         """
@@ -112,30 +168,32 @@ class Bus:
         """
         return self.__last_update
 
-    def get_time_since_last_update(self):
+    @staticmethod
+    def get_time_since_last_update(timestamp):
         """
-        Converts the last_update field to time since last update by getting the difference from the current time.
-        :return: The number of seconds since the bus was last updated.
+        Converts a unix timestamp to time since last update by getting the difference from the current time.
+        :param timestamp: A unix timestamp corresponding to the last time a bus was updated.
+        :return: The number of seconds since timestamp.
         """
-        return int(time.time() - self.__last_update)
-
-    def is_stopped(self):
-        """
-        Sees if the bus is currently not moving.
-        :return: True if the bus is stopped, false otherwise.
-        """
-        return self.__heading == 0 or self.__speed < 0.5
+        return int(time.time() - timestamp)
 
     def to_dict(self):
         return {
             'id': self.__id,
             'name': self.__name,
-            'route': self.__route,
+            'route_id': self.__route,
+            'route_dict': Bus.route_id_to_dict(self.__route),
             'location': self.__location,
+            'latitude': self.__location[0],
+            'longitude': self.__location[1],
             'heading': self.__heading,
+            'heading_cardinal': Bus.get_heading_cardinal(self.__heading),
             'speed': self.__speed,
+            'validated_speed': Bus.validate_speed(self.__speed),
             'last_stop': self.__last_stop,
-            'last_update': self.__last_update
+            'last_stop_dict': Bus.stop_id_to_dict(self.__last_stop),
+            'last_update': self.__last_update,
+            'time_since_last_update': Bus.get_time_since_last_update(self.__last_update)
         }
 
     def __repr__(self):

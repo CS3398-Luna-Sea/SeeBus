@@ -22,19 +22,19 @@ class BusTracker:
         """
         self.__prev = self.__buses
         self.__buses = []
-        bus_dict = api.get_buses()
+        raw_bus_list = api.get_buses()
 
-        # bus_dict = api.get_buses_on_route(633)
+        # raw_bus_list = api.get_buses_on_route(633)
 
-        for bus in bus_dict:
-            id = bus['id']
-            name = bus['name']
-            route = bus['route']
-            location = (bus['lat'], bus['lon'])
-            heading = bus['heading']
+        for raw_bus in raw_bus_list:
+            id = raw_bus['id']
+            name = raw_bus['name']
+            route = raw_bus['route']
+            location = (raw_bus['lat'], raw_bus['lon'])
+            heading = raw_bus['heading']
             speed = -1
-            last_stop = bus['lastStop']
-            last_update = bus['lastUpdate']
+            last_stop = raw_bus['lastStop']
+            last_update = raw_bus['lastUpdate']
             b = bus.Bus(id, name=name, route=route, location=location, heading=heading, speed=speed,
                         last_stop=last_stop, last_update=last_update)
             self.__buses.append(b)

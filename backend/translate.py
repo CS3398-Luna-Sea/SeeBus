@@ -1,101 +1,101 @@
 route_id_dict = {
     613: {
-        'txst id': 56,
+        'txst_id': 56,
         'type': 'Night',
         'name': 'Night South'
     },
     614: {
-        'txst id': 52,
+        'txst_id': 52,
         'type': 'Night',
         'name': 'Night North'
     },
     615: {
-        'txst id': 50,
+        'txst_id': 50,
         'type': 'Night',
         'name': 'Night East'
     },
     616: {
-        'txst id': 46,
+        'txst_id': 46,
         'type': 'Evening',
         'name': 'Wonder World'
     },
     617: {
-        'txst id': 44,
+        'txst_id': 44,
         'type': 'Evening',
         'name': 'Ranch Road/Craddock/Holland'
     },
     618: {
-        'txst id': 14,
+        'txst_id': 14,
         'type': 'Evening',
         'name': 'Mill/Post'
     },
     619: {
-        'txst id': 40,
+        'txst_id': 40,
         'type': 'Evening',
         'name':'Aquarena/Blanco'
     },
     620: {
-        'txst id': 30,
+        'txst_id': 30,
         'type': 'Special',
         'name': 'Pathways'
     },
     633: {
-        'txst id': 10,
+        'txst_id': 10,
         'type': 'On Campus',
         'name': 'Bobcat Stadium'
     },
     634: {
-        'txst id': 12,
+        'txst_id': 12,
         'type': 'On Campus',
         'name': 'Bobcat Village'
     },
     635: {
-        'txst id': 14,
+        'txst_id': 14,
         'type': 'On Campus',
         'name': 'Campus Loop'
     },
     636: {
-        'txst id': 20,
+        'txst_id': 20,
         'type': 'Off Campus',
         'name': 'Aquarena Springs'
     },
     637: {
-        'txst id': 21,
+        'txst_id': 21,
         'type': 'Off Campus',
         'name': 'Blanco River',
     },
     638: {
-        'txst id': 22,
+        'txst_id': 22,
         'type': 'Off Campus',
         'name': 'Mill Street'
     },
     639: {
-        'txst id': 23,
+        'txst_id': 23,
         'type': 'Off Campus',
         'name': 'Post Road'
     },
     640: {
-        'txst id': 24,
+        'txst_id': 24,
         'type': 'Off Campus',
         'name': 'Craddock'
     },
     641: {
-        'txst id': 25,
+        'txst_id': 25,
         'type': 'Off Campus',
         'name': 'Ranch Road'
     },
     642: {
-        'txst id': 26,
+        'txst_id': 26,
         'type': 'Off Campus',
         'name': 'Wonder World'
     },
     643: {
-        'txst id': 28,
+        'txst_id': 28,
         'type': 'Special',
         'name': 'Holland'
     },
     655: {
-        'txst id': 54,
+        'txst_id': 54,
         'type': 'Night',
         'name': 'Night West'
     }
