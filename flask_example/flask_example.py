@@ -1,5 +1,4 @@
-import poll_api as api
-from BusTracker import BusTracker
+from backend.bus_tracker import BusTracker
 from flask import Flask, render_template
 app = Flask(__name__)
 

@@ -1,5 +1,4 @@
-import BusTracker
-import translate
+from backend import bus_tracker, translate
 import time
 
 
@@ -15,7 +14,7 @@ class DisplayCommandLine:
         """
         Initializes a BusTracker object to update and display information.
         """
-        self.__bt = BusTracker.BusTracker()
+        self.__bt = bus_tracker.BusTracker()
 
     def loop(self):
         """
