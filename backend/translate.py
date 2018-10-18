@@ -116,6 +116,9 @@ stop_id_dict = {
     5: {
         'name': 'Cabana Beach'
     },
+    6: {
+        'name': 'Copper Beach'
+    },
     8: {
         'name': 'Dakota Ranch'
     },
@@ -196,6 +199,9 @@ stop_id_dict = {
     },
     39: {
         'name': 'Spring Marc'
+    },
+    40: {
+        'name': 'Verandah'
     },
     41: {
         'name': 'Village Green'
