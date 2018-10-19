@@ -22,3 +22,27 @@
     - Place for suggestions on how we can improve web app
 - See what other buses DoubleMap provides service for, do the same thing for their system
 - After all that, mobile app???
+
+
+Average between stop times
+|  Begin stop ID  |  Begin time  |  End stop ID  |  End time  |
+
+-----
+
+Average time spent at each stop
+|  Route ID  |  Stop ID  |  Arrival time  |  Departure time  |
+
+-----
+
+Distance travelled by each bus in a day
+|  Bus ID  |  Route  |  Day  |  Distance travelled in that day  |
+|  Bus ID  |  Route  |  Day  |  Distance travelled in that day  |
+|  Bus ID  |  Route  |  Day  |  Distance travelled in that day  |
+|  Bus ID  |  Route  |  Day  |  Distance travelled in that day  |
+|  Bus ID  |  Route  |  Day  |  Distance travelled in that day  |
+
+
+-----
+
+Another idea about storing data in just one database in a good fashion so that we can process the data and calculate all the statistics above just form one table
+(idea was drawn on a piece of paper, will detail here later)
