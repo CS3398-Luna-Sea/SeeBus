@@ -2,62 +2,134 @@ route_id_dict = {
     613: {
         'txst_id': 56,
         'type': 'Night',
-        'name': 'Night South'
+        'name': 'Night South',
+        'friday': False
     },
     614: {
         'txst_id': 52,
         'type': 'Night',
-        'name': 'Night North'
+        'name': 'Night North',
+        'friday': False
     },
     615: {
         'txst_id': 50,
         'type': 'Night',
-        'name': 'Night East'
+        'name': 'Night East',
+        'friday': False
     },
     616: {
         'txst_id': 46,
         'type': 'Evening',
-        'name': 'Wonder World'
+        'name': 'Wonder World',
+        'friday': False
     },
     617: {
         'txst_id': 44,
         'type': 'Evening',
-        'name': 'Ranch Road/Craddock/Holland'
+        'name': 'Ranch Road/Craddock/Holland',
+        'friday': False
     },
     618: {
         'txst_id': 14,
         'type': 'Evening',
-        'name': 'Mill/Post'
+        'name': 'Mill/Post',
+        'friday': False
     },
     619: {
         'txst_id': 40,
         'type': 'Evening',
-        'name':'Aquarena/Blanco'
+        'name':'Aquarena/Blanco',
+        'friday': False
     },
     620: {
         'txst_id': 30,
         'type': 'Special',
-        'name': 'Pathways'
+        'name': 'Pathways',
+        'friday': False
+    },
+    622: {
+        'txst_id': 10,
+        'type': 'On Campus',
+        'name': 'Bobcat Stadium',
+        'friday': True
+    },
+    624: {
+        'txst_id': 14,
+        'type': 'On Campus',
+        'name': 'Campus Loop',
+        'friday': True
+    },
+    625: {
+        'txst_id': 20,
+        'type': 'Off Campus',
+        'name': 'Aquarena Springs',
+        'friday': True
+    },
+    626: {
+        'txst_id': 21,
+        'type': 'Off Campus',
+        'name': 'Blanco River',
+        'friday': True
+    },
+    627: {
+        'txst_id': 22,
+        'type': 'Off Campus',
+        'name': 'Mill Street',
+        'friday': True
+    },
+    628: {
+        'txst_id': 23,
+        'type': 'Off Campus',
+        'name': 'Post Road',
+        'friday': True
+    },
+    629: {
+        'txst_id': 24,
+        'type': 'Off Campus',
+        'name': 'Craddock',
+        'friday': True
+    },
+    630: {
+        'txst_id': 25,
+        'type': 'Off Campus',
+        'name': 'Ranch Road',
+        'friday': True
+    },
+    631: {
+        'txst_id': 26,
+        'type': 'Off Campus',
+        'name': 'Wonder World',
+        'friday': True
+    },
+    632: {
+        'txst_id': 28,
+        'type': 'Special',
+        'name': 'Holland',
+        'friday': True
     },
     633: {
         'txst_id': 10,
         'type': 'On Campus',
-        'name': 'Bobcat Stadium'
+        'name': 'Bobcat Stadium',
+        'friday': False
     },
     634: {
         'txst_id': 12,
         'type': 'On Campus',
-        'name': 'Bobcat Village'
+        'name': 'Bobcat Village',
+        'friday': False
     },
     635: {
         'txst_id': 14,
         'type': 'On Campus',
-        'name': 'Campus Loop'
+        'name': 'Campus Loop',
+        'friday': False
     },
     636: {
         'txst_id': 20,
         'type': 'Off Campus',
-        'name': 'Aquarena Springs'
+        'name': 'Aquarena Springs',
+        'friday': False
     },
     637: {
         'txst_id': 21,
@@ -67,37 +139,49 @@ route_id_dict = {
     638: {
         'txst_id': 22,
         'type': 'Off Campus',
-        'name': 'Mill Street'
+        'name': 'Mill Street',
+        'friday': False
     },
     639: {
         'txst_id': 23,
         'type': 'Off Campus',
-        'name': 'Post Road'
+        'name': 'Post Road',
+        'friday': False
     },
     640: {
         'txst_id': 24,
         'type': 'Off Campus',
-        'name': 'Craddock'
+        'name': 'Craddock',
+        'friday': False
     },
     641: {
         'txst_id': 25,
         'type': 'Off Campus',
-        'name': 'Ranch Road'
+        'name': 'Ranch Road',
+        'friday': False
     },
     642: {
         'txst_id': 26,
         'type': 'Off Campus',
-        'name': 'Wonder World'
+        'name': 'Wonder World',
+        'friday': False
     },
     643: {
         'txst_id': 28,
         'type': 'Special',
-        'name': 'Holland'
+        'name': 'Holland',
+        'friday': False
     },
     655: {
         'txst_id': 54,
         'type': 'Night',
         'name': 'Night West'
+    },
+    656: {
+        'txst_id': 12,
+        'type': 'On Campus',
+        'name': 'Bobcat Village',
+        'friday': True
     }
 }
 stop_id_dict = {
@@ -213,6 +297,9 @@ stop_id_dict = {
         'name': 'Uptown Square'
     },
     59: {
+        'name': '?????'
+    },
+    60: {
         'name': '?????'
     },
     66: {
