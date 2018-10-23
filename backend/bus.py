@@ -134,7 +134,7 @@ class Bus:
         :return: A validated speed integer.
         """
         if speed != -1 and abs(speed) < 100:
-            return '{: >5.2f}'.format(speed)
+            return '{: >5d}'.format(int(speed))
         else:
             return '     '
 

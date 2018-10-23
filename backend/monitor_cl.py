@@ -1,4 +1,4 @@
-from backend import bus_tracker
+from backend.bus_tracker import BusTracker
 import time
 
 
@@ -14,7 +14,7 @@ class DisplayCommandLine:
         """
         Initializes a BusTracker object to update and display information.
         """
-        self.__bt = bus_tracker.BusTracker()
+        self.__bt = BusTracker()
 
     def loop(self):
         """
@@ -48,15 +48,17 @@ class DisplayCommandLine:
         name = bus.get_name()
         route_id = bus.get_route()
         route_str = bus.route_id_to_dict(route_id)['name']
-        route_txst_id = str(bus.route_id_to_dict(route_id)['txst id'])
+        route_txst_id = str(bus.route_id_to_dict(route_id)['txst_id'])
         loc_lat = bus.get_location()[0]
         loc_lon = bus.get_location()[1]
-        heading_cardinal = bus.get_heading_cardinal()
+        heading = bus.get_heading()
+        heading_cardinal = bus.get_heading_cardinal(heading)
         speed_str = bus.validate_speed(bus.get_speed())
         stopped_char = DisplayCommandLine.__stopped_character if bus.is_stopped() else ' '
         last_stop_id = bus.get_last_stop()
         last_stop_str = bus.stop_id_to_dict(last_stop_id)['name']
-        time_since_last_update = bus.get_time_since_last_update()
+        last_update = bus.get_last_update()
+        time_since_last_update = bus.get_time_since_last_update(last_update)
 
         #       | Name   | Route        | Location         | Head   | Sped      | LStop        | LUpdated        |
         return "| {:>4s} | {:2s} {:28s} | {:2.2f}, {:2.2f} | {:>7s} | {:s} {:s} | {:24s} |   {:2d} sec ago |" \

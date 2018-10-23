@@ -300,7 +300,10 @@ stop_id_dict = {
         'name': '?????'
     },
     60: {
-        'name': '?????'
+        'name': 'Speck?'
+    },
+    61: {
+        'name': 'Highcrest'
     },
     66: {
         'name': 'West Ave'
@@ -317,7 +320,6 @@ stop_id_dict = {
 }
 
 # Fenway Loop
-# Highcrest
 # Prime Outlet
 # Target
 # The Grove
