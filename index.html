@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>SeeBus - TXST Bus Tracking</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="css/simple-sidebar.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <div class="sidenav">
+                <a href="#">Dashboard</a>
+                <a href="#">Data</a>
+                <a href="#">About</a>
+                <a href="#"></a>
+    </div>
+        <!-- /#sidebar-wrapper -->
+    <div  class="main">
+        <!-- Page Content -->
+        <div id="page-content-wrapper">
+            <meta name="viewport" content="initial-scale=1.0">
+            <meta charset="utf-8">
+                
+
+            <div class="container-fluid">
+                <h1>SeeBus</h1>
+                <p>Welcome to SeeBus!</p>
+                <p>Make sure to keep all page content within the <code>#page-content-wrapper</code>.</p>
+            </div>
+            
+            <section id="map">
+                    <img width="900" height="450" class="center" src="https://maps.googleapis.com/maps/api/staticmap?center=san+marcos,+tx&zoom=14&scale=2&size=600x300&maptype=roadmap&key=AIzaSyAXDk6ouxFMSx9biyOj1s6sblwJsPU-e4Q&format=png&visual_refresh=true&markers=size:mid%7Ccolor:0xff0000%7Clabel:1%7Csan+marcos,+tx" 
+                    alt="Google Map of san marcos, tx">              
+            </section>
+
+        </div>
+    </div>
+    <!-- /#wrapper -->
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Menu Toggle Script -->
+    <script>
+            $("#menu-toggle").click(function(e) {
+                e.preventDefault();
+                $("#wrapper").toggleClass("toggled");
+            });
+            </script>
+</body>
+
+</html>
