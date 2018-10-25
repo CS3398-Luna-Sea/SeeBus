@@ -210,7 +210,7 @@ stop_id_dict = {
         'name': 'Edge'
     },
     10: {
-        'name': 'Elevation'
+        'name': 'Elevation (The Outpost???)'
     },
     11: {
         'name': 'Heights II'
@@ -232,6 +232,9 @@ stop_id_dict = {
     },
     18: {
         'name': 'Matthews'
+    },
+    19: {
+        'name': 'Mill Street Lot North (?)'
     },
     21: {
         'name': 'Palazzo'
@@ -264,7 +267,7 @@ stop_id_dict = {
         'name': 'Summit'
     },
     33: {
-        'name': 'The Old Mill'
+        'name': 'The Grove'
     },
     34: {
         'name': 'Telluride'
@@ -322,4 +325,4 @@ stop_id_dict = {
 # Fenway Loop
 # Prime Outlet
 # Target
-# The Grove
+# The Old Mill

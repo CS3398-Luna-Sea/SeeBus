@@ -124,7 +124,7 @@ class Bus:
         Sees if the bus is currently not moving.
         :return: True if the bus is stopped, false otherwise.
         """
-        return self.__heading == 0 or self.__speed < 0.5
+        return self.__heading == 0 or self.__speed < 1
 
     @staticmethod
     def validate_speed(speed):
