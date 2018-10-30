@@ -68,7 +68,7 @@ class Saver:
                 self.__buses[id]['stop flag'] = False
 
     def __after(self):
-        with open('data{}.json'.format(datetime.now().timestamp()), 'w+') as f:
+        with open('./backend/bus_data/data{}.json'.format(datetime.now().timestamp()), 'w+') as f:
             f.write(json.dumps(self.__data, indent=2))
 
 
