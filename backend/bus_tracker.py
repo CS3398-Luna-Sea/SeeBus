@@ -1,4 +1,5 @@
-from backend import poll_api as api, bus
+import poll_api as api
+from bus import Bus
 import time
 import pprint
 from geopy.distance import geodesic
@@ -35,7 +36,7 @@ class BusTracker:
             speed = -1
             last_stop = bus['lastStop']
             last_update = bus['lastUpdate']
-            b = bus.Bus(id, name=name, route=route, location=location, heading=heading, speed=speed,
+            b = Bus(id, name=name, route=route, location=location, heading=heading, speed=speed,
                         last_stop=last_stop, last_update=last_update)
             self.__buses.append(b)
 
