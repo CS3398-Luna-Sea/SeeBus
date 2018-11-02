@@ -2,6 +2,7 @@ from backend import poll_api as api, bus
 import time
 import pprint
 from geopy.distance import geodesic
+import re
 
 
 class BusTracker:
@@ -22,19 +23,19 @@ class BusTracker:
         """
         self.__prev = self.__buses
         self.__buses = []
-        bus_dict = api.get_buses()
+        raw_bus_list = api.get_buses()
 
-        # bus_dict = api.get_buses_on_route(633)
+        # raw_bus_list = api.get_buses_on_route(633)
 
-        for bus in bus_dict:
-            id = bus['id']
-            name = bus['name']
-            route = bus['route']
-            location = (bus['lat'], bus['lon'])
-            heading = bus['heading']
+        for raw_bus in raw_bus_list:
+            id = raw_bus['id']
+            name = raw_bus['name']
+            route = raw_bus['route']
+            location = (raw_bus['lat'], raw_bus['lon'])
+            heading = raw_bus['heading']
             speed = -1
-            last_stop = bus['lastStop']
-            last_update = bus['lastUpdate']
+            last_stop = raw_bus['lastStop']
+            last_update = raw_bus['lastUpdate']
             b = bus.Bus(id, name=name, route=route, location=location, heading=heading, speed=speed,
                         last_stop=last_stop, last_update=last_update)
             self.__buses.append(b)
@@ -74,8 +75,26 @@ class BusTracker:
     def get_buses(self):
         """
         Returns the current list of buses.
+        :return: The current list of buses.
         """
         return self.__buses
+
+    def get_buses_sorted(self, f):
+        """
+        Returns the current list of buses sorted by a 'get_' function in Bus.
+        :param f: The attribute of Bus to sort by, passed as a function of the form get_buses_sorted(Bus.get_xxxx)
+        :return: The sorted list of buses
+        """
+        m = re.match('<function Bus.(get_.*) at 0x[\w]*>', str(f))
+        if m is None:
+            raise TypeError("Must sort using a get_xxxx() method from Bus")
+        else:
+            f_str = m.group(1)
+
+        return sorted(
+            self.__buses,
+            key=lambda bus: getattr(bus, f_str)()
+        )
 
     def get_delay(self):
         return self.__delay
