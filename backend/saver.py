@@ -11,20 +11,25 @@ class Saver:
         self.__start_hour = start_hour
         self.__end_hour = end_hour
         self.__buses = {}
-        self.__data = {
-            "date": str(datetime.now().date()),
-            "buses": {}
-        }
+        self.__data = {}
         self.__departure_threshold = departure_threshold
 
     def loop(self):
         try:
-            while self.__start_hour <= datetime.now().hour < self.__end_hour:
-                self.__update_data()
+            while True:
+                if self.__start_hour <= datetime.now().hour < self.__end_hour:
+                    self.__data = {
+                        "date": str(datetime.now().date()),
+                        "buses": {}
+                    }
+                while self.__start_hour <= datetime.now().hour < self.__end_hour:
+                    self.__update_data()
+                self.__save()
         except KeyboardInterrupt:
-            pass
-        self.__after()
-        quit()
+            print("Stopping... Saving data...")
+            self.__save()
+            print("Done.")
+            quit(0)
 
     def __update_data(self):
         self.__bt.update_buses()
@@ -67,7 +72,7 @@ class Saver:
                                                                  translate.stop_id_dict[curr_stop]['name']))
                 self.__buses[id]['stop flag'] = False
 
-    def __after(self):
+    def __save(self):
         with open('./backend/bus_data/data{}.json'.format(datetime.now().timestamp()), 'w+') as f:
             f.write(json.dumps(self.__data, indent=2))
 
