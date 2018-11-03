@@ -1,19 +1,6 @@
 <!DOCTYPE html>
-<html lang="en">
-
-<head>
-
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="">
-
-    <title>SeeBus - TXST Bus Tracking</title>
-
-    <!-- CSS sidebar -->
-    <link href="frontend/css/simple-sidebar.css" rel="stylesheet">
-
-    <!-- google map style-->
+<html>
+  <head>
     <style>
       /* Always set the map height explicitly to define the size of the div
        * element that contains the map. */
@@ -27,47 +14,16 @@
         padding: 0;
       }
     </style>
-</head>
-
-<body>
-    <!-- sidebar navigation -->
-    <div class="sidenav">
-                <a href="#">Dashboard</a>
-                <a href="frontend/data.html">Data</a>
-                <a href="frontend/about.html">About</a>
-                <a href="#"></a>
-    </div>
-        <!-- /#sidebar-wrapper -->
-    <div  class="main">
-        <!-- Page Content -->
-        <div id="page-content-wrapper">
-            <meta name="viewport" content="initial-scale=1.0">
-            <meta charset="utf-8">
-                
-
-            <div class="container-fluid">
-                <h1>SeeBus</h1>
-                <p>Welcome to SeeBus!</p>
-                <p>Make sure to keep all page content within the <code>#page-content-wrapper</code>.</p>
-            </div>
-        
-            <div id="map" style="width:50%;height:400px;" class="center" ></div>
-            
-          </div>
-            
-
-
-        </div>
-    </div>
-    <!-- /#wrapper -->
-
+  </head>
+  <body>
+    <div id="map" style="width:50%;height:400px;" ></div>
     <script>
       var map;
       function initMap() {
         map = new google.maps.Map(document.getElementById('map'), {
-          zoom: 14,
-          center: new google.maps.LatLng(29.8833,-97.9414),
-          mapTypeId: 'roadmap'
+          zoom: 2,
+          center: new google.maps.LatLng(2.8,-187.3),
+          mapTypeId: 'terrain'
         });
 
         // Create a <script> tag and set the USGS URL as the source.
@@ -94,7 +50,5 @@
     <script async defer
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD_6AHlUzHorOfMd_Lad7df0RDAsOjuvIU&callback=initMap">
     </script>
-
-</body>
-
+  </body>
 </html>
