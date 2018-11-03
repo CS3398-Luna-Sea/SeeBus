@@ -4,6 +4,11 @@
  * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap-simple-sidebar/blob/master/LICENSE)
  */
 
+/*button sizing */
+.button-small {
+  font-size: 70%;
+}
+
 body {
   overflow-x: hidden;
 }
