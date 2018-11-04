@@ -1,5 +1,5 @@
-from backend.bus_tracker import BusTracker
-from backend import translate
+from bus_tracker import BusTracker
+import translate
 from datetime import datetime
 import json
 
@@ -26,7 +26,7 @@ class Saver:
                     self.__update_data()
                 self.__save()
         except KeyboardInterrupt:
-            print("Stopping... Saving data...")
+            print("\nStopping... Saving data...")
             self.__save()
             print("Done.")
             quit(0)
@@ -50,8 +50,11 @@ class Saver:
 
             # If new stop
             if bus.is_stopped() and curr_stop != prev_stop:
-                print('{}, {} on {} arrived at {}'.format(datetime.now().time(), id, translate.route_id_dict[bus.get_route()]['name'],
+                try:
+                    print('{}, {} on {} arrived at {}'.format(datetime.now().time(), id, translate.route_id_dict[bus.get_route()]['name'],
                                                                  translate.stop_id_dict[curr_stop]['name']))
+                except KeyError:
+                    pass
                 # Add timestamp to data
                 self.__data["buses"][id].append({
                     'route': bus.get_route(),
@@ -68,13 +71,18 @@ class Saver:
             # If bus was stopped and bus is moving now -> departure
             if self.__buses[id]['stop flag'] and bus.get_speed() > self.__departure_threshold:
                 self.__data["buses"][id][-1]['departure time'] = datetime.now().timestamp()
-                print('{}, {} on {} leaving {}'.format(datetime.now().time(), id, translate.route_id_dict[bus.get_route()]['name'],
+                try:
+                    print('{}, {} on {} leaving {}'.format(datetime.now().time(), id, translate.route_id_dict[bus.get_route()]['name'],
                                                                  translate.stop_id_dict[curr_stop]['name']))
+                except KeyError:
+                    pass
                 self.__buses[id]['stop flag'] = False
 
     def __save(self):
-        with open('./backend/bus_data/data{}.json'.format(datetime.now().timestamp()), 'w+') as f:
+        filename = 'bus_data/data{}.json'.format(datetime.now().timestamp())
+        with open(filename, 'w+') as f:
             f.write(json.dumps(self.__data, indent=2))
+        print(filename)
 
 
 if __name__ == '__main__':
