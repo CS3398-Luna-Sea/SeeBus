@@ -3,97 +3,88 @@
 
 <head>
 
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
 
-    <title>SeeBus - TXST Bus Tracking</title>
+  <title>SeeBus - TXST Bus Tracking</title>
 
-    <!-- CSS sidebar -->
-    <link href="frontend/css/simple-sidebar.css" rel="stylesheet">
-
-    <!-- google map style-->
-    <style>
-      /* Always set the map height explicitly to define the size of the div
+  <!-- CSS sidebar -->
+  <!-- <link href="frontend/css/simple-sidebar.css" rel="stylesheet"> -->
+  <link rel="stylesheet" href="frontend/css/responsive-menu.css">
+  <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/pure-min.css" integrity="sha384-nn4HPE8lTHyVtfCBi5yW9d20FjT8BJwUXyWZT9InLYax14RDjBj46LmSztkmNP9w"
+    crossorigin="anonymous">
+  <!-- google map style-->
+  <style>
+    /* Always set the map height explicitly to define the size of the div
        * element that contains the map. */
-      #map {
-        height: 100%;
-      }
-      /* Optional: Makes the sample page fill the window. */
-      html, body {
-        height: 100%;
-        margin: 0;
-        padding: 0;
-      }
-    </style>
+
+    #map {
+      height: 100%;
+    }
+
+    /* Optional: Makes the sample page fill the window. */
+
+    html,
+    body {
+      height: 100%;
+      margin: 0;
+      padding: 0;
+    }
+  </style>
 </head>
 
 <body>
-    <!-- sidebar navigation -->
-    <div class="sidenav">
-                <a href="#">Dashboard</a>
-                <a href="frontend/data.html">Data</a>
-                <a href="frontend/about.html">About</a>
-                <a href="#"></a>
+  <div id="layout">
+    <!-- Menu toggle -->
+    <a href="#menu" id="menuLink" class="menu-link">
+      <!-- Hamburger icon -->
+      <span></span>
+    </a>
+
+    <div id="menu">
+      <div class="pure-menu">
+        <a class="pure-menu-heading pure-menu-link">SeeBus</a>
+
+        <ul class="pure-menu-list">
+          <li class="pure-menu-item pure-menu-selected">
+            <a href="#" class="pure-menu-link">Dashboard</a>
+          </li>
+
+          <li class="pure-menu-item">
+            <a href="frontend/about.html" class="pure-menu-link">About Us</a>
+          </li>
+
+          <li class="pure-menu-item">
+            <a href="frontend/data.html" class="pure-menu-link">Data</a>
+          </li>
+        </ul>
+      </div>
     </div>
-        <!-- /#sidebar-wrapper -->
-    <div  class="main">
-        <!-- Page Content -->
-        <div id="page-content-wrapper">
-            <meta name="viewport" content="initial-scale=1.0">
-            <meta charset="utf-8">
-                
-
-            <div class="container-fluid">
-                <h1>SeeBus</h1>
-                <p>Welcome to SeeBus!</p>
-                <p>Make sure to keep all page content within the <code>#page-content-wrapper</code>.</p>
-            </div>
-        
-            <div id="map" style="width:50%;height:400px;" class="center" ></div>
-            
-          </div>
-            
-
-
-        </div>
+  </div>
+  <div id="main">
+    <!-- Page Content -->
+    <div class="header">
+      <h1>SeeBus</h1>
+      <p>Welcome to SeeBus!</p>
     </div>
-    <!-- /#wrapper -->
+    <div class="content">
+      <!--  -->
+        <div id="map" style="width:100%;height:400px;" ></div>
+    </div>
 
-    <script>
-      var map;
-      function initMap() {
-        map = new google.maps.Map(document.getElementById('map'), {
-          zoom: 14,
-          center: new google.maps.LatLng(29.8833,-97.9414),
-          mapTypeId: 'roadmap'
-        });
 
-        // Create a <script> tag and set the USGS URL as the source.
-        var script = document.createElement('script');
-        // This example uses a local copy of the GeoJSON stored at
-        // http://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/2.5_week.geojsonp
-        script.src = 'https://developers.google.com/maps/documentation/javascript/examples/json/earthquake_GeoJSONP.js';
-        document.getElementsByTagName('head')[0].appendChild(script);
-      }
 
-      // Loop through the results array and place a marker for each
-      // set of coordinates.
-      window.eqfeed_callback = function(results) {
-        for (var i = 0; i < results.features.length; i++) {
-          var coords = results.features[i].geometry.coordinates;
-          var latLng = new google.maps.LatLng(coords[1],coords[0]);
-          var marker = new google.maps.Marker({
-            position: latLng,
-            map: map
-          });
-        }
-      }
-    </script>
-    <script async defer
-    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD_6AHlUzHorOfMd_Lad7df0RDAsOjuvIU&callback=initMap">
-    </script>
+  </div>
+  </div>
+  <!-- /#wrapper -->
+
+  
+  <script src="frontend/js/menu-collapse.js"></script>
+  <script src="frontend/js/map-script.js"></script>
+  <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD_6AHlUzHorOfMd_Lad7df0RDAsOjuvIU&callback=initMap">
+  </script>
 
 </body>
 
