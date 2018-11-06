@@ -135,6 +135,7 @@ route_id_dict = {
         'txst_id': 21,
         'type': 'Off Campus',
         'name': 'Blanco River',
+        'friday': False
     },
     638: {
         'txst_id': 22,

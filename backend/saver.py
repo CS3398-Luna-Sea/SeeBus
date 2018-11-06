@@ -58,7 +58,7 @@ class Saver:
             if bus.is_stopped() and curr_stop != prev_stop:
                 try:
                     print('{} on {} arrived at {}'.format(id, translate.route_id_dict[bus.get_route()]['name'],
-                                                                 translate.stop_id_dict[curr_stop]['name']))
+                                                          translate.stop_id_dict[curr_stop]['name']))
                 except KeyError:
                     pass
                 # Add timestamp to data
@@ -79,7 +79,7 @@ class Saver:
                 self.__data["buses"][id][-1]['departure time'] = datetime.now().timestamp()
                 try:
                     print('{} on {} leaving {}'.format(id, translate.route_id_dict[bus.get_route()]['name'],
-                                                                 translate.stop_id_dict[curr_stop]['name']))
+                                                       translate.stop_id_dict[curr_stop]['name']))
                 except KeyError:
                     pass
                 self.__buses[id]['stop flag'] = False
