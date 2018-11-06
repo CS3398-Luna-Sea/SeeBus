@@ -7,19 +7,20 @@ import json
 
 class Saver:
 
-    def __init__(self, start_hour, end_hour, departure_threshold=5):
+    def __init__(self, start_hour, end_hour, departure_threshold=5, timezone=pytz.timezone('US/Central')):
         self.__bt = BusTracker()
         self.__start_hour = start_hour
         self.__end_hour = end_hour
         self.__buses = {}
         self.__data = {}
         self.__departure_threshold = departure_threshold
+        self.__timezone = timezone
 
     def loop(self):
         should_save = False
         try:
             while True:
-                now = pytz.utc.localize(datetime.now()).astimezone(pytz.timezone('US/Central'))
+                now = datetime.now(self.__timezone)
                 if self.__start_hour <= now.hour < self.__end_hour:
                     self.__data = {
                         "date": str(now.date()),
