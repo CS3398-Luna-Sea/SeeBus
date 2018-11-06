@@ -1,10 +1,6 @@
-<<<<<<< HEAD
-=======
 import sys
 from os import getcwd
 sys.path.insert(0, getcwd() + '/backend')
-
->>>>>>> dev
 import poll_api as api
 from bus import Bus
 import time
@@ -42,13 +38,10 @@ class BusTracker:
             location = (raw_bus['lat'], raw_bus['lon'])
             heading = raw_bus['heading']
             speed = -1
-<<<<<<< HEAD
-            last_stop = bus['lastStop']
-            last_update = bus['lastUpdate']
-=======
+
             last_stop = raw_bus['lastStop']
             last_update = raw_bus['lastUpdate']
->>>>>>> dev
+
             b = Bus(id, name=name, route=route, location=location, heading=heading, speed=speed,
                         last_stop=last_stop, last_update=last_update)
             self.__buses.append(b)

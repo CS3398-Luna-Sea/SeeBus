@@ -4,7 +4,6 @@ import datetime
 import time
 
 class AutoMongo:
-
     def currentDay(self):
         today = datetime.datetime.today().weekday()
         if today == 0:
@@ -24,22 +23,20 @@ class AutoMongo:
             bus_dict = api.get_buses()
             x = mycol.insert_many(bus_dict)
             time.sleep(5)
-
-
 if __name__ == '__main__':
 
     am = AutoMongo()
-    print "Today is: " + am.currentDay()
+    print ("Today is: " + am.currentDay())
 
 
 myclient = pymongo.MongoClient("mongodb://localhost:27017/")
 mydb = myclient[am.currentDay() + "BusDatabase"]
 mycol = mydb[am.currentDay() + "BusCollection"]
-
-print myclient.list_database_names()
-
-
 am.insert_Buses()
+print (myclient.list_database_names())
+
+
+
 
 
 
