@@ -84,7 +84,7 @@ class Saver:
                 self.__buses[id]['stop flag'] = False
 
     def __save(self):
-        filename = 'bus_data/data{}.json'.format(datetime.now().timestamp())
+        filename = 'backend/bus_data/data{}.json'.format(datetime.now().timestamp())
         with open(filename, 'w+') as f:
             f.write(json.dumps(self.__data, indent=2))
         print(filename)
