@@ -8,9 +8,13 @@ def get_buses():
     Polls the DoubleMap API.
     :return: A list of dictionaries corresponding to the buses currently in service.
     """
-    r = requests.get('http://txstate.doublemap.com/map/v2/buses')
-    buses = json.loads(r.text)
-    return buses
+    try:
+        r = requests.get('http://txstate.doublemap.com/map/v2/buses')
+        buses = json.loads(r.text)
+        return buses
+    except requests.exceptions.ConnectionError:
+        pass
+        return {}
 
 
 def get_buses_on_route(route):
@@ -25,5 +29,6 @@ def get_buses_on_route(route):
 
 
 if __name__ == "__main__":
-    b = get_buses_on_route(639)
-    pprint.pprint(b)
+    buses = get_buses()
+    # buses = get_buses_on_route(617)
+    pprint.pprint(buses)

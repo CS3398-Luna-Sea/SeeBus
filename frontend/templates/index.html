@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>SeeBus</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+</head>
+<body>
+
+    <div id="bus_list"></div>
+
+    <script type="text/javascript">
+        function get_buses() {
+            $.ajax({
+                url: "/buses",
+                type: "GET",
+                success: function(response) {
+                    $("#bus_list").html(response);
+                },
+            });
+        }
+        setInterval(get_buses, 1000);
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    </head>
+
+    <body>                 
+        <div id="place_for_time"></div>
+        
+        <script>
+            setInterval(function() {                
+                $.ajax({
+                    url: "/time",
+                    type: "get",
+                    success: function(response) {
+                        $("#place_for_time").html(response);
+                    },
+                });
+            }, 1000);
+        </script>
+    </body>
+
+</html>
