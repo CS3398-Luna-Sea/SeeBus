@@ -1,6 +1,7 @@
 from bus_tracker import BusTracker
 import translate
 from datetime import datetime
+import pytz
 import json
 
 
@@ -18,12 +19,13 @@ class Saver:
         should_save = False
         try:
             while True:
-                if self.__start_hour <= datetime.now().hour < self.__end_hour:
+                now = pytz.utc.localize(datetime.now()).astimezone(pytz.timezone('US/Central'))
+                if self.__start_hour <= now.hour < self.__end_hour:
                     self.__data = {
-                        "date": str(datetime.now().date()),
+                        "date": str(now.date()),
                         "buses": {}
                     }
-                while self.__start_hour <= datetime.now().hour < self.__end_hour:
+                while self.__start_hour <= now.hour < self.__end_hour:
                     self.__update_data()
                     should_save = True
                 if should_save:
@@ -54,7 +56,7 @@ class Saver:
             # If new stop
             if bus.is_stopped() and curr_stop != prev_stop:
                 try:
-                    print('{}, {} on {} arrived at {}'.format(datetime.now().time(), id, translate.route_id_dict[bus.get_route()]['name'],
+                    print('{} on {} arrived at {}'.format(id, translate.route_id_dict[bus.get_route()]['name'],
                                                                  translate.stop_id_dict[curr_stop]['name']))
                 except KeyError:
                     pass
@@ -75,7 +77,7 @@ class Saver:
             if self.__buses[id]['stop flag'] and bus.get_speed() > self.__departure_threshold:
                 self.__data["buses"][id][-1]['departure time'] = datetime.now().timestamp()
                 try:
-                    print('{}, {} on {} leaving {}'.format(datetime.now().time(), id, translate.route_id_dict[bus.get_route()]['name'],
+                    print('{} on {} leaving {}'.format(id, translate.route_id_dict[bus.get_route()]['name'],
                                                                  translate.stop_id_dict[curr_stop]['name']))
                 except KeyError:
                     pass
@@ -89,5 +91,5 @@ class Saver:
 
 
 if __name__ == '__main__':
-    s = Saver(7, 22)
+    s = Saver(0, 24)
     s.loop()
