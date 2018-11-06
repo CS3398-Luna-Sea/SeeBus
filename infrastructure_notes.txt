@@ -1,3 +1,5 @@
-ubuntu@35.168.221.32
+AWS Lightsail service as been setup. Server that will be hosting website is:
 
-Server requires key to login. Pleae ask Chris if access is required. 
+ubuntu@176.26.3.236
+
+Server requires key to login. Pleae ask Chris if access is required. Python and Java are currently installed. 
