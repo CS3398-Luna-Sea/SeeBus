@@ -1,0 +1,72 @@
+{
+  "date": "2018-10-24",
+  "buses": {
+    "417": [
+      {
+        "route": 655,
+        "stop": 43,
+        "arrival time": 1540434447.966737,
+        "departure time": 1540434452.089177
+      },
+      {
+        "route": 655,
+        "stop": 28,
+        "arrival time": 1540434600.129754,
+        "departure time": 1540434600.129767
+      },
+      {
+        "route": 655,
+        "stop": 27,
+        "arrival time": 1540434720.08673,
+        "departure time": 1540434748.08959
+      },
+      {
+        "route": 655,
+        "stop": 16,
+        "arrival time": 1540435086.153684
+      }
+    ],
+    "419": [
+      {
+        "route": 615,
+        "stop": 11,
+        "arrival time": 1540434447.96675,
+        "departure time": 1540434456.140657
+      }
+    ],
+    "436": [
+      {
+        "route": 614,
+        "stop": 19,
+        "arrival time": 1540434447.966758,
+        "departure time": 1540434460.071091
+      },
+      {
+        "route": 614,
+        "stop": 22,
+        "arrival time": 1540435286.150095,
+        "departure time": 1540435294.155709
+      }
+    ],
+    "440": [
+      {
+        "route": 613,
+        "stop": 81,
+        "arrival time": 1540434447.966764,
+        "departure time": 1540434508.158622
+      },
+      {
+        "route": 613,
+        "stop": 5,
+        "arrival time": 1540435378.074091,
+        "departure time": 1540435398.126608
+      },
+      {
+        "route": 613,
+        "stop": 39,
+        "arrival time": 1540435430.170434,
+        "departure time": 1540435442.087298
+      }
+    ]
+  }
+}
