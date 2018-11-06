@@ -47,7 +47,8 @@ class Saver:
             if id not in self.__buses:
                 self.__buses[id] = {
                     'stop': None,
-                    'speed': None
+                    'speed': None,
+                    'stop flag': False
                 }
                 self.__data["buses"][id] = []
 
