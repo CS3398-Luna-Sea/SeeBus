@@ -15,6 +15,7 @@ class Saver:
         self.__departure_threshold = departure_threshold
 
     def loop(self):
+        should_save = False
         try:
             while True:
                 if self.__start_hour <= datetime.now().hour < self.__end_hour:
@@ -24,7 +25,9 @@ class Saver:
                     }
                 while self.__start_hour <= datetime.now().hour < self.__end_hour:
                     self.__update_data()
-                self.__save()
+                    should_save = True
+                if should_save:
+                    self.__save()
         except KeyboardInterrupt:
             print("\nStopping... Saving data...")
             self.__save()
