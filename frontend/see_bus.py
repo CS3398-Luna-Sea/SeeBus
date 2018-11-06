@@ -1,6 +1,10 @@
+import sys
+from os import getcwd
+sys.path.insert(0, getcwd() + '/backend')
+
 from bus_tracker import BusTracker
-from flask import Flask, render_template
 from bus import Bus
+from flask import Flask, render_template
 
 
 app = Flask(__name__)
