@@ -30,3 +30,7 @@ are used by `BusTracker`.
 * Miguel
   * Get example database up and running
   * Begin saving bus data into database for use in statistics calculations later
+  11/07\2018
+  * Save Data either while it is being pulled using the saver class, or after the fact from the JSON files provided by Zachs Saver class.
+  * Research and implement queries perhaps using these for our final calculations.
+  
