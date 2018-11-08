@@ -4,3 +4,4 @@ __*
 *.pyc
 venv
 missing.txt
+backend/bus_data

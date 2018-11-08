@@ -1,4 +1,4 @@
-from backend.bus_tracker import BusTracker
+from bus_tracker import BusTracker
 import time
 
 
