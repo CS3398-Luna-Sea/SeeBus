@@ -19,7 +19,7 @@ def index():
 @app.route('/buses')
 def buses():
     bt.update_buses()
-    buses = [bus.to_dict() for bus in bt.get_buses_sorted(Bus.get_route)]
+    buses = [bus.to_dict() for bus in bt.get_buses_sorted(Bus.get_id)]
     return render_template('buses.html', buses=buses)
 
 

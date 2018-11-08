@@ -3,6 +3,7 @@ from bus import Bus
 import time
 import pprint
 from geopy.distance import geodesic
+import re
 
 
 class BusTracker:
@@ -77,6 +78,23 @@ class BusTracker:
         Returns the current list of buses.
         """
         return self.__buses
+
+    def get_buses_sorted(self, f):
+        """
+        Returns the current list of buses sorted by a 'get_' function in Bus.
+        :param f: The attribute of Bus to sort by, passed as a function of the form get_buses_sorted(Bus.get_xxxx)
+        :return: The sorted list of buses
+        """
+        m = re.match('<function Bus.(get_.*) at 0x[\w]*>', str(f))
+        if m is None:
+            raise TypeError("Must sort using a get_xxxx() method from Bus")
+        else:
+            f_str = m.group(1)
+
+        return sorted(
+            self.__buses,
+            key=lambda bus: getattr(bus, f_str)()
+        )
 
     def get_delay(self):
         return self.__delay
