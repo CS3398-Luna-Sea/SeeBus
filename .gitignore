@@ -4,5 +4,5 @@ __*
 *.pyc
 venv
 missing.txt
-backend/bus_data
+backend/bus_data/*
 ideas.txt
