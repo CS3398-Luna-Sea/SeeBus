@@ -14,7 +14,7 @@ def get_buses():
         return buses
     except requests.exceptions.ConnectionError:
         pass
-        return {}
+        return []
 
 
 def get_buses_on_route(route):

@@ -52,7 +52,7 @@ class DisplayCommandLine:
         loc_lat = bus.get_location()[0]
         loc_lon = bus.get_location()[1]
         heading = bus.get_heading()
-        heading_cardinal = bus.get_heading_cardinal(heading)
+        heading_cardinal = bus.convert_heading(heading)
         speed_str = bus.validate_speed(bus.get_speed())
         stopped_char = DisplayCommandLine.__stopped_character if bus.is_stopped() else ' '
         last_stop_id = bus.get_last_stop()
