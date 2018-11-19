@@ -45,6 +45,12 @@ route_id_dict = {
         'txst_id': 30,
         'type': 'Special',
         'name': 'Pathways',
+        'friday': True
+    },
+    621: {
+        'txst_id': 30,
+        'type': 'Special',
+        'name': 'Pathways',
         'friday': False
     },
     622: {
