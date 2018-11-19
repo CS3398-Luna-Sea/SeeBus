@@ -79,7 +79,7 @@ class Bus:
         return self.__heading
 
     @staticmethod
-    def get_heading_cardinal(heading):
+    def convert_heading(heading):
         """
         Converts the integer heading (0-360) to a cardinal direction (N, NE, E, SE, etc).
         :param heading: The integer heading of a bus, 0-360 degrees.
@@ -102,7 +102,7 @@ class Bus:
             return 'W'
         elif 292.5 < a <= 337.5:
             return 'NW'
-        elif 337.5 < a < 360 or 0 < a <= 22.5:
+        elif 337.5 < a <= 360 or 0 < a <= 22.5:
             return 'N'
 
     def set_speed(self, speed):
@@ -187,7 +187,7 @@ class Bus:
             'latitude': self.__location[0],
             'longitude': self.__location[1],
             'heading': self.__heading,
-            'heading_cardinal': Bus.get_heading_cardinal(self.__heading),
+            'heading_cardinal': Bus.convert_heading(self.__heading),
             'speed': self.__speed,
             'validated_speed': Bus.validate_speed(self.__speed),
             'last_stop': self.__last_stop,

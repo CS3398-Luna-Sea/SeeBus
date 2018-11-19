@@ -1,32 +1,43 @@
 # SeeBus
 
-## Steps to Run
-All of the backend python code can be downloaded and ran (with the appropriate modules installed).
+## Steps to Run Backend Code
+*This tutorial assumes you already have pip and (if you wish) a means of creating virtual environments installed on your machine. If you do not, this tutorial can help*
 
-You can go to our website by visiting the IP directly [`http://35.168.221.32`](http://35.168.221.32).
+Clone the repository to your machine and navigate to the root directory of our project.
+```bash
+git clone https://github.com/CS3398-Luna-Sea/SeeBus && cd SeeBus
+```
 
-## Current Status
-Currently, 2 classes, [`Bus.py`](backend/bus.py) and [`BusTracker.py`](backend/bus_tracker.py) successfully poll the API and show information.
+Install all the necessary python packages (it is recommended that you do so in a virtual environment).
+```bash
+pip install -r requirements.txt
+```
 
-`Bus` objects hold information about buses, and `BusTracker` has a list of buses, polls the API to update it, and
-displays the information every 3 seconds.
+To see a table of all the currently active buses shown in the command line, run the BusTracker class.
+```bash
+python backend/monitor_cl.py
+```
 
-All code can be downloaded and ran to show the output described above. In the future, this output will be manipulated
-and formatted to display all desired information in a nice presentable manner.
+To see a simple locally hosted web page of all the currently active buses, run the Flask application.
+```bash
+python frontend/see_bus.py
+```
+Then navigate to [`localhost:5000`](localhost:5000).
 
-[`poll_api.py`](backend/poll_api.py) contains functions to request various inforamtion from the DoubleMap API. These functions
-are used by `BusTracker`.
+## Steps to see frontend
+Navigate to [`54.146.186.245`](http://54.146.186.245).
+Soon, our domain name SeeBus.net will be connected to the IP.
 
-[`infrastructure_notes.txt`](infrastructure_notes.txt) contains the IP of our remote server.
 
 ## Next Steps
 * Zach
-  * Implement speed calculation
-  * Make bus info display in nice format in command line
+    * Research how to integrate the Flask app with our server.
+    * Assist Chris and Miguel in tying together all the individual pieces of our project.
+    * Review all code and put refactor and document it.
 * Chris
-  * Get example webpage up and running with domain name
-  * Figure out infrastructure (Gradle, TravisCI)
-  * Experiment with map APIs
+    * Get Domain Name connected to server.
+    * Integrate SeeBus live data stream into Frontend
+    * Show live bus locations on Google Map
 * Miguel
   * Get example database up and running
   * Begin saving bus data into database for use in statistics calculations later
