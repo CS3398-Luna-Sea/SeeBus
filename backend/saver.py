@@ -3,7 +3,9 @@ import translate
 from datetime import datetime
 import pytz
 import json
-
+import pymongo
+from datetime import date
+import calendar
 
 class Saver:
 
@@ -42,6 +44,7 @@ class Saver:
 
         for bus in self.__bt.get_buses():
             id = bus.get_id()
+            id = str(id)
 
             # if bus doesn't have a list, make one
             if id not in self.__buses:
@@ -74,6 +77,7 @@ class Saver:
                 # Set stop flag, watch for speed to go above threshold signalling departure
                 self.__buses[id]['stop flag'] = True
 
+
             # If bus was stopped and bus is moving now -> departure
             if self.__buses[id]['stop flag'] and bus.get_speed() > self.__departure_threshold:
                 self.__data["buses"][id][-1]['departure time'] = datetime.now().timestamp()
@@ -90,7 +94,15 @@ class Saver:
             f.write(json.dumps(self.__data, indent=2))
         print(filename)
 
+        myclient = pymongo.MongoClient("mongodb://localhost:27017/")
+        mydb = myclient["TestBusDatabase"]
+
+        my_date = date.today()
+        mycol = mydb[calendar.day_name[my_date.weekday()] + "Collection"]
+        mycol.insert_one(self.__data)
+        print("Inserting a Bus List into :" + calendar.day_name[my_date.weekday()] + "Collection")
 
 if __name__ == '__main__':
     s = Saver(7, 22)
     s.loop()
+
