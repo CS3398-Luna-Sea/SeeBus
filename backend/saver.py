@@ -17,6 +17,9 @@ class Saver:
         self.__timezone = timezone
 
     def loop(self):
+        """
+        Constantly runs and saves a JSON file with bus data once each day.
+        """
         should_save = False
         try:
             while True:
@@ -38,6 +41,9 @@ class Saver:
             quit(0)
 
     def __update_data(self):
+        """
+        Updates the buses and the data collected regarding their arrival and departure times.
+        """
         self.__bt.update_buses()
 
         for bus in self.__bt.get_buses():
@@ -86,6 +92,9 @@ class Saver:
                 self.__buses[id]['stop flag'] = False
 
     def __save(self):
+        """
+        Saves a JSON file with the bus data with a unique filename.
+        """
         filename = 'backend/bus_data/data{}.json'.format(datetime.now().timestamp())
         with open(filename, 'w+') as f:
             f.write(json.dumps(self.__data, indent=2))
