@@ -95,7 +95,7 @@ class Saver:
         print(filename)
 
         myclient = pymongo.MongoClient("mongodb://localhost:27017/")
-        mydb = myclient["TestBusDatabase"]
+        mydb = myclient["November_27_BusDatabase"]
 
         my_date = date.today()
         mycol = mydb[calendar.day_name[my_date.weekday()] + "Collection"]
