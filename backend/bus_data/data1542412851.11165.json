@@ -1,0 +1,1355 @@
+{
+  "date": "2018-11-16",
+  "buses": {
+    "401": [
+      {
+        "route": 622,
+        "stop": 3,
+        "arrival time": 1542404491.381905,
+        "departure time": 1542404498.933598
+      },
+      {
+        "route": 622,
+        "stop": 4,
+        "arrival time": 1542404559.292542,
+        "departure time": 1542404581.309982
+      },
+      {
+        "route": 622,
+        "stop": 31,
+        "arrival time": 1542404720.634584,
+        "departure time": 1542404720.634607
+      },
+      {
+        "route": 622,
+        "stop": 36,
+        "arrival time": 1542405299.942451,
+        "departure time": 1542405610.047314
+      },
+      {
+        "route": 622,
+        "stop": 3,
+        "arrival time": 1542405999.178112,
+        "departure time": 1542406021.047704
+      },
+      {
+        "route": 622,
+        "stop": 4,
+        "arrival time": 1542406099.360818,
+        "departure time": 1542406123.336691
+      },
+      {
+        "route": 622,
+        "stop": 31,
+        "arrival time": 1542406249.067425,
+        "departure time": 1542406271.310637
+      },
+      {
+        "route": 622,
+        "stop": 36,
+        "arrival time": 1542406854.083435,
+        "departure time": 1542407417.545248
+      },
+      {
+        "route": 622,
+        "stop": 3,
+        "arrival time": 1542407841.306942,
+        "departure time": 1542407869.259033
+      },
+      {
+        "route": 622,
+        "stop": 4,
+        "arrival time": 1542407950.25471,
+        "departure time": 1542407998.317333
+      },
+      {
+        "route": 622,
+        "stop": 31,
+        "arrival time": 1542408155.869726,
+        "departure time": 1542408190.324467
+      },
+      {
+        "route": 622,
+        "stop": 36,
+        "arrival time": 1542408851.763256,
+        "departure time": 1542409195.250141
+      },
+      {
+        "route": 622,
+        "stop": 3,
+        "arrival time": 1542409551.194904,
+        "departure time": 1542409587.202966
+      },
+      {
+        "route": 622,
+        "stop": 4,
+        "arrival time": 1542409670.044225,
+        "departure time": 1542409701.806627
+      },
+      {
+        "route": 622,
+        "stop": 31,
+        "arrival time": 1542409868.21628,
+        "departure time": 1542409884.74032
+      },
+      {
+        "route": 622,
+        "stop": 36,
+        "arrival time": 1542410589.220669,
+        "departure time": 1542411074.176827
+      },
+      {
+        "route": 622,
+        "stop": 3,
+        "arrival time": 1542411586.486003,
+        "departure time": 1542411626.20731
+      },
+      {
+        "route": 622,
+        "stop": 4,
+        "arrival time": 1542411711.156125,
+        "departure time": 1542411759.21106
+      },
+      {
+        "route": 622,
+        "stop": 31,
+        "arrival time": 1542411861.833958,
+        "departure time": 1542411873.258644
+      },
+      {
+        "route": 622,
+        "stop": 36,
+        "arrival time": 1542412450.669647
+      }
+    ],
+    "405": [
+      {
+        "route": 656,
+        "stop": 22,
+        "arrival time": 1542404491.383046,
+        "departure time": 1542404498.934405
+      },
+      {
+        "route": 656,
+        "stop": 16,
+        "arrival time": 1542404793.304317,
+        "departure time": 1542404829.745021
+      },
+      {
+        "route": 656,
+        "stop": 22,
+        "arrival time": 1542404994.889227,
+        "departure time": 1542405175.699694
+      },
+      {
+        "route": 656,
+        "stop": 16,
+        "arrival time": 1542406171.799732,
+        "departure time": 1542406221.083134
+      },
+      {
+        "route": 656,
+        "stop": 22,
+        "arrival time": 1542406379.792729,
+        "departure time": 1542406581.690879
+      },
+      {
+        "route": 656,
+        "stop": 16,
+        "arrival time": 1542407577.263174,
+        "departure time": 1542407621.303665
+      },
+      {
+        "route": 656,
+        "stop": 22,
+        "arrival time": 1542407773.321965,
+        "departure time": 1542407986.295939
+      },
+      {
+        "route": 656,
+        "stop": 16,
+        "arrival time": 1542409027.279092,
+        "departure time": 1542409047.313584
+      },
+      {
+        "route": 656,
+        "stop": 22,
+        "arrival time": 1542409216.011667,
+        "departure time": 1542409587.203511
+      },
+      {
+        "route": 656,
+        "stop": 16,
+        "arrival time": 1542410835.293734,
+        "departure time": 1542410835.293746
+      },
+      {
+        "route": 656,
+        "stop": 18,
+        "arrival time": 1542411010.177992,
+        "departure time": 1542411022.180464
+      },
+      {
+        "route": 656,
+        "stop": 22,
+        "arrival time": 1542411126.181937,
+        "departure time": 1542411126.181961
+      },
+      {
+        "route": 656,
+        "stop": 16,
+        "arrival time": 1542412279.927539,
+        "departure time": 1542412304.205338
+      },
+      {
+        "route": 656,
+        "stop": 22,
+        "arrival time": 1542412454.107032,
+        "departure time": 1542412528.784222
+      }
+    ],
+    "422": [
+      {
+        "route": 628,
+        "stop": 66,
+        "arrival time": 1542404491.384987,
+        "departure time": 1542404497.283101
+      },
+      {
+        "route": 628,
+        "stop": 22,
+        "arrival time": 1542404619.625652,
+        "departure time": 1542405054.852812
+      },
+      {
+        "route": 628,
+        "stop": 35,
+        "arrival time": 1542405504.109313,
+        "departure time": 1542405528.124196
+      },
+      {
+        "route": 628,
+        "stop": 10,
+        "arrival time": 1542405587.967916,
+        "departure time": 1542405600.040726
+      },
+      {
+        "route": 628,
+        "stop": 66,
+        "arrival time": 1542405767.882145,
+        "departure time": 1542405782.260943
+      },
+      {
+        "route": 628,
+        "stop": 22,
+        "arrival time": 1542406145.181935,
+        "departure time": 1542406618.335148
+      },
+      {
+        "route": 628,
+        "stop": 10,
+        "arrival time": 1542407045.619446,
+        "departure time": 1542407061.269899
+      },
+      {
+        "route": 628,
+        "stop": 66,
+        "arrival time": 1542407285.385954,
+        "departure time": 1542407301.90011
+      },
+      {
+        "route": 628,
+        "stop": 22,
+        "arrival time": 1542407593.570402,
+        "departure time": 1542408046.58824
+      },
+      {
+        "route": 628,
+        "stop": 35,
+        "arrival time": 1542408495.276202,
+        "departure time": 1542408511.263163
+      },
+      {
+        "route": 628,
+        "stop": 10,
+        "arrival time": 1542408575.236783,
+        "departure time": 1542408579.331693
+      },
+      {
+        "route": 628,
+        "stop": 66,
+        "arrival time": 1542408743.279918,
+        "departure time": 1542408755.316198
+      },
+      {
+        "route": 628,
+        "stop": 22,
+        "arrival time": 1542409143.340893,
+        "departure time": 1542409544.124518
+      },
+      {
+        "route": 628,
+        "stop": 35,
+        "arrival time": 1542409980.784845,
+        "departure time": 1542410002.573485
+      },
+      {
+        "route": 628,
+        "stop": 10,
+        "arrival time": 1542410061.490554,
+        "departure time": 1542410078.238218
+      },
+      {
+        "route": 628,
+        "stop": 66,
+        "arrival time": 1542410237.186078,
+        "departure time": 1542410273.235118
+      },
+      {
+        "route": 628,
+        "stop": 22,
+        "arrival time": 1542410633.21021,
+        "departure time": 1542411038.269285
+      },
+      {
+        "route": 628,
+        "stop": 10,
+        "arrival time": 1542411578.164386,
+        "departure time": 1542411590.224131
+      },
+      {
+        "route": 628,
+        "stop": 66,
+        "arrival time": 1542411815.189446,
+        "departure time": 1542411843.250068
+      },
+      {
+        "route": 628,
+        "stop": 22,
+        "arrival time": 1542412165.618867
+      }
+    ],
+    "424": [
+      {
+        "route": 627,
+        "stop": 22,
+        "arrival time": 1542404491.385843,
+        "departure time": 1542404498.935483
+      },
+      {
+        "route": 627,
+        "stop": 34,
+        "arrival time": 1542405297.357613,
+        "departure time": 1542405337.175573
+      },
+      {
+        "route": 627,
+        "stop": 22,
+        "arrival time": 1542406002.331866,
+        "departure time": 1542406215.389708
+      },
+      {
+        "route": 627,
+        "stop": 34,
+        "arrival time": 1542406712.429109,
+        "departure time": 1542406729.974259
+      },
+      {
+        "route": 627,
+        "stop": 22,
+        "arrival time": 1542407366.12946,
+        "departure time": 1542407817.252032
+      },
+      {
+        "route": 627,
+        "stop": 34,
+        "arrival time": 1542408410.99443,
+        "departure time": 1542408449.745624
+      },
+      {
+        "route": 627,
+        "stop": 22,
+        "arrival time": 1542409079.593694,
+        "departure time": 1542409483.306757
+      },
+      {
+        "route": 627,
+        "stop": 34,
+        "arrival time": 1542410033.983974,
+        "departure time": 1542410068.243365
+      },
+      {
+        "route": 627,
+        "stop": 22,
+        "arrival time": 1542410809.251722,
+        "departure time": 1542411038.269993
+      },
+      {
+        "route": 627,
+        "stop": 34,
+        "arrival time": 1542411590.225279,
+        "departure time": 1542411602.197603
+      }
+    ],
+    "427": [
+      {
+        "route": 625,
+        "stop": 26,
+        "arrival time": 1542404491.387667,
+        "departure time": 1542404509.664139
+      },
+      {
+        "route": 625,
+        "stop": 36,
+        "arrival time": 1542405179.330089,
+        "departure time": 1542405583.961647
+      },
+      {
+        "route": 625,
+        "stop": 25,
+        "arrival time": 1542406147.277955,
+        "departure time": 1542406199.339553
+      },
+      {
+        "route": 625,
+        "stop": 26,
+        "arrival time": 1542406251.421515,
+        "departure time": 1542406261.347287
+      },
+      {
+        "route": 625,
+        "stop": 36,
+        "arrival time": 1542407085.291512,
+        "departure time": 1542407448.052384
+      },
+      {
+        "route": 625,
+        "stop": 25,
+        "arrival time": 1542407975.380874,
+        "departure time": 1542408018.436166
+      },
+      {
+        "route": 625,
+        "stop": 26,
+        "arrival time": 1542408054.265166,
+        "departure time": 1542408082.543566
+      },
+      {
+        "route": 625,
+        "stop": 36,
+        "arrival time": 1542408711.216286,
+        "departure time": 1542409216.011721
+      },
+      {
+        "route": 625,
+        "stop": 25,
+        "arrival time": 1542409851.069505,
+        "departure time": 1542409884.740864
+      },
+      {
+        "route": 625,
+        "stop": 26,
+        "arrival time": 1542410209.286969,
+        "departure time": 1542410221.324915
+      },
+      {
+        "route": 625,
+        "stop": 36,
+        "arrival time": 1542410613.248345,
+        "departure time": 1542411022.180989
+      },
+      {
+        "route": 625,
+        "stop": 25,
+        "arrival time": 1542411608.329562,
+        "departure time": 1542411610.13709
+      }
+    ],
+    "429": [
+      {
+        "route": 624,
+        "stop": 22,
+        "arrival time": 1542404491.388511,
+        "departure time": 1542404530.928068
+      },
+      {
+        "route": 624,
+        "stop": 16,
+        "arrival time": 1542404750.951653,
+        "departure time": 1542404750.951676
+      },
+      {
+        "route": 624,
+        "stop": 23,
+        "arrival time": 1542405328.59377,
+        "departure time": 1542405359.860564
+      },
+      {
+        "route": 624,
+        "stop": 73,
+        "arrival time": 1542405415.853109,
+        "departure time": 1542405424.159367
+      },
+      {
+        "route": 624,
+        "stop": 43,
+        "arrival time": 1542405626.304948,
+        "departure time": 1542405654.33497
+      },
+      {
+        "route": 624,
+        "stop": 15,
+        "arrival time": 1542405732.69216,
+        "departure time": 1542405787.700269
+      },
+      {
+        "route": 624,
+        "stop": 28,
+        "arrival time": 1542405982.364817,
+        "departure time": 1542406092.947073
+      },
+      {
+        "route": 624,
+        "stop": 27,
+        "arrival time": 1542406145.183026,
+        "departure time": 1542406145.183047
+      },
+      {
+        "route": 624,
+        "stop": 22,
+        "arrival time": 1542406347.319453,
+        "departure time": 1542406375.307665
+      },
+      {
+        "route": 624,
+        "stop": 16,
+        "arrival time": 1542406765.437295,
+        "departure time": 1542407098.020819
+      },
+      {
+        "route": 624,
+        "stop": 23,
+        "arrival time": 1542407332.571205,
+        "departure time": 1542407366.12951
+      },
+      {
+        "route": 624,
+        "stop": 73,
+        "arrival time": 1542407404.082359,
+        "departure time": 1542407430.060122
+      },
+      {
+        "route": 624,
+        "stop": 43,
+        "arrival time": 1542407643.581073,
+        "departure time": 1542407669.928865
+      },
+      {
+        "route": 624,
+        "stop": 15,
+        "arrival time": 1542407817.253217,
+        "departure time": 1542407881.330761
+      },
+      {
+        "route": 624,
+        "stop": 28,
+        "arrival time": 1542407942.578166,
+        "departure time": 1542408026.328817
+      },
+      {
+        "route": 624,
+        "stop": 27,
+        "arrival time": 1542408141.815144,
+        "departure time": 1542408222.921395
+      },
+      {
+        "route": 624,
+        "stop": 22,
+        "arrival time": 1542408311.235128,
+        "departure time": 1542408342.311728
+      },
+      {
+        "route": 624,
+        "stop": 16,
+        "arrival time": 1542408663.279866,
+        "departure time": 1542409079.593743
+      },
+      {
+        "route": 624,
+        "stop": 23,
+        "arrival time": 1542409260.840151,
+        "departure time": 1542409271.248321
+      },
+      {
+        "route": 624,
+        "stop": 73,
+        "arrival time": 1542409315.347653,
+        "departure time": 1542409339.370395
+      },
+      {
+        "route": 624,
+        "stop": 43,
+        "arrival time": 1542409539.353652,
+        "departure time": 1542409567.315674
+      },
+      {
+        "route": 624,
+        "stop": 28,
+        "arrival time": 1542409804.291992,
+        "departure time": 1542409804.292015
+      },
+      {
+        "route": 624,
+        "stop": 22,
+        "arrival time": 1542410193.19961,
+        "departure time": 1542410221.325505
+      },
+      {
+        "route": 624,
+        "stop": 16,
+        "arrival time": 1542410511.468322,
+        "departure time": 1542410926.261204
+      },
+      {
+        "route": 624,
+        "stop": 23,
+        "arrival time": 1542411173.825364,
+        "departure time": 1542411190.174856
+      },
+      {
+        "route": 624,
+        "stop": 73,
+        "arrival time": 1542411222.201306,
+        "departure time": 1542411243.950389
+      },
+      {
+        "route": 624,
+        "stop": 43,
+        "arrival time": 1542411417.178858,
+        "departure time": 1542411443.159966
+      },
+      {
+        "route": 624,
+        "stop": 15,
+        "arrival time": 1542411517.142981,
+        "departure time": 1542411529.194471
+      },
+      {
+        "route": 624,
+        "stop": 28,
+        "arrival time": 1542411659.196836,
+        "departure time": 1542411688.775955
+      },
+      {
+        "route": 624,
+        "stop": 22,
+        "arrival time": 1542412017.844613,
+        "departure time": 1542412042.089865
+      }
+    ],
+    "430": [
+      {
+        "route": 626,
+        "stop": 11,
+        "arrival time": 1542404491.389364,
+        "departure time": 1542404498.936566
+      },
+      {
+        "route": 626,
+        "stop": 36,
+        "arrival time": 1542405187.315879,
+        "departure time": 1542405549.367266
+      },
+      {
+        "route": 626,
+        "stop": 38,
+        "arrival time": 1542405977.183985,
+        "departure time": 1542405982.364854
+      },
+      {
+        "route": 626,
+        "stop": 11,
+        "arrival time": 1542406119.408519,
+        "departure time": 1542406137.29656
+      },
+      {
+        "route": 626,
+        "stop": 36,
+        "arrival time": 1542407061.271832,
+        "departure time": 1542407409.986489
+      },
+      {
+        "route": 626,
+        "stop": 38,
+        "arrival time": 1542407909.114853,
+        "departure time": 1542407913.434902
+      },
+      {
+        "route": 626,
+        "stop": 11,
+        "arrival time": 1542408058.36396,
+        "departure time": 1542408086.329564
+      },
+      {
+        "route": 626,
+        "stop": 36,
+        "arrival time": 1542408941.516427,
+        "departure time": 1542409155.279841
+      },
+      {
+        "route": 626,
+        "stop": 38,
+        "arrival time": 1542409595.226723,
+        "departure time": 1542409611.222437
+      },
+      {
+        "route": 626,
+        "stop": 11,
+        "arrival time": 1542409750.521396,
+        "departure time": 1542409776.849131
+      },
+      {
+        "route": 626,
+        "stop": 36,
+        "arrival time": 1542410689.143761,
+        "departure time": 1542411066.163527
+      },
+      {
+        "route": 626,
+        "stop": 38,
+        "arrival time": 1542411554.193492,
+        "departure time": 1542411571.133885
+      },
+      {
+        "route": 626,
+        "stop": 11,
+        "arrival time": 1542411688.776453,
+        "departure time": 1542411704.138216
+      }
+    ],
+    "432": [
+      {
+        "route": 629,
+        "stop": 16,
+        "arrival time": 1542404491.390213,
+        "departure time": 1542404587.319724
+      },
+      {
+        "route": 629,
+        "stop": 2,
+        "arrival time": 1542404982.880319,
+        "departure time": 1542405008.19497
+      },
+      {
+        "route": 629,
+        "stop": 1,
+        "arrival time": 1542405071.253709,
+        "departure time": 1542405071.253732
+      },
+      {
+        "route": 629,
+        "stop": 29,
+        "arrival time": 1542405373.288587,
+        "departure time": 1542405375.900866
+      },
+      {
+        "route": 629,
+        "stop": 16,
+        "arrival time": 1542405536.987162,
+        "departure time": 1542405902.325465
+      },
+      {
+        "route": 629,
+        "stop": 2,
+        "arrival time": 1542406360.539995,
+        "departure time": 1542406379.792788
+      },
+      {
+        "route": 629,
+        "stop": 1,
+        "arrival time": 1542406458.016045,
+        "departure time": 1542406478.029982
+      },
+      {
+        "route": 629,
+        "stop": 24,
+        "arrival time": 1542406565.289071,
+        "departure time": 1542406593.50484
+      },
+      {
+        "route": 629,
+        "stop": 16,
+        "arrival time": 1542406949.395344,
+        "departure time": 1542407114.130703
+      },
+      {
+        "route": 629,
+        "stop": 2,
+        "arrival time": 1542407525.289344,
+        "departure time": 1542407541.613196
+      },
+      {
+        "route": 629,
+        "stop": 1,
+        "arrival time": 1542407618.693701,
+        "departure time": 1542407637.912457
+      },
+      {
+        "route": 629,
+        "stop": 24,
+        "arrival time": 1542407735.519494,
+        "departure time": 1542407757.899637
+      },
+      {
+        "route": 629,
+        "stop": 29,
+        "arrival time": 1542407881.331998,
+        "departure time": 1542407881.332013
+      },
+      {
+        "route": 629,
+        "stop": 16,
+        "arrival time": 1542408113.891345,
+        "departure time": 1542408491.348608
+      },
+      {
+        "route": 629,
+        "stop": 2,
+        "arrival time": 1542408923.314168,
+        "departure time": 1542408923.31419
+      },
+      {
+        "route": 629,
+        "stop": 1,
+        "arrival time": 1542409023.36122,
+        "departure time": 1542409047.314117
+      },
+      {
+        "route": 629,
+        "stop": 24,
+        "arrival time": 1542409216.013142,
+        "departure time": 1542409244.391126
+      },
+      {
+        "route": 629,
+        "stop": 29,
+        "arrival time": 1542409435.231674,
+        "departure time": 1542409455.70457
+      },
+      {
+        "route": 629,
+        "stop": 16,
+        "arrival time": 1542409683.178048,
+        "departure time": 1542409695.255257
+      },
+      {
+        "route": 629,
+        "stop": 2,
+        "arrival time": 1542410197.180886,
+        "departure time": 1542410221.32632
+      },
+      {
+        "route": 629,
+        "stop": 1,
+        "arrival time": 1542410333.275923,
+        "departure time": 1542410397.672513
+      },
+      {
+        "route": 629,
+        "stop": 29,
+        "arrival time": 1542410673.20525,
+        "departure time": 1542410685.177841
+      },
+      {
+        "route": 629,
+        "stop": 16,
+        "arrival time": 1542410741.731906,
+        "departure time": 1542411070.184206
+      },
+      {
+        "route": 629,
+        "stop": 2,
+        "arrival time": 1542411501.208364,
+        "departure time": 1542411526.828268
+      },
+      {
+        "route": 629,
+        "stop": 1,
+        "arrival time": 1542411635.206014,
+        "departure time": 1542411667.214986
+      },
+      {
+        "route": 629,
+        "stop": 24,
+        "arrival time": 1542411679.236875,
+        "departure time": 1542411704.138738
+      }
+    ],
+    "433": [
+      {
+        "route": 631,
+        "stop": 21,
+        "arrival time": 1542404491.391006,
+        "departure time": 1542404497.28388
+      },
+      {
+        "route": 631,
+        "stop": 81,
+        "arrival time": 1542405429.324415,
+        "departure time": 1542405445.136996
+      },
+      {
+        "route": 631,
+        "stop": 5,
+        "arrival time": 1542406680.360678,
+        "departure time": 1542406718.166706
+      },
+      {
+        "route": 631,
+        "stop": 39,
+        "arrival time": 1542406773.887122,
+        "departure time": 1542406802.221427
+      },
+      {
+        "route": 631,
+        "stop": 37,
+        "arrival time": 1542406997.304066,
+        "departure time": 1542407006.052509
+      },
+      {
+        "route": 631,
+        "stop": 21,
+        "arrival time": 1542407849.281041,
+        "departure time": 1542407946.339007
+      },
+      {
+        "route": 631,
+        "stop": 81,
+        "arrival time": 1542409745.171455,
+        "departure time": 1542409934.672971
+      },
+      {
+        "route": 631,
+        "stop": 5,
+        "arrival time": 1542410966.215234,
+        "departure time": 1542410966.215266
+      },
+      {
+        "route": 631,
+        "stop": 39,
+        "arrival time": 1542411074.177366,
+        "departure time": 1542411095.791762
+      },
+      {
+        "route": 631,
+        "stop": 37,
+        "arrival time": 1542411226.173183,
+        "departure time": 1542411226.173201
+      },
+      {
+        "route": 631,
+        "stop": 21,
+        "arrival time": 1542411691.227526,
+        "departure time": 1542411707.142925
+      },
+      {
+        "route": 631,
+        "stop": 81,
+        "arrival time": 1542412718.17813
+      }
+    ],
+    "440": [
+      {
+        "route": 630,
+        "stop": 29,
+        "arrival time": 1542404491.391956,
+        "departure time": 1542404498.937538
+      },
+      {
+        "route": 630,
+        "stop": 16,
+        "arrival time": 1542404537.324162,
+        "departure time": 1542404734.880062
+      },
+      {
+        "route": 630,
+        "stop": 60,
+        "arrival time": 1542404998.921436,
+        "departure time": 1542404998.921459
+      },
+      {
+        "route": 630,
+        "stop": 9,
+        "arrival time": 1542405209.611489,
+        "departure time": 1542405239.968136
+      },
+      {
+        "route": 630,
+        "stop": 8,
+        "arrival time": 1542405355.84757,
+        "departure time": 1542405373.288629
+      },
+      {
+        "route": 630,
+        "stop": 29,
+        "arrival time": 1542405583.786013,
+        "departure time": 1542405600.041551
+      },
+      {
+        "route": 630,
+        "stop": 16,
+        "arrival time": 1542405767.882586,
+        "departure time": 1542406083.475743
+      },
+      {
+        "route": 630,
+        "stop": 60,
+        "arrival time": 1542406317.311764,
+        "departure time": 1542406333.288542
+      },
+      {
+        "route": 630,
+        "stop": 12,
+        "arrival time": 1542406373.157304,
+        "departure time": 1542406373.157315
+      },
+      {
+        "route": 630,
+        "stop": 9,
+        "arrival time": 1542406536.102846,
+        "departure time": 1542406548.203889
+      },
+      {
+        "route": 630,
+        "stop": 8,
+        "arrival time": 1542406629.480332,
+        "departure time": 1542406660.318007
+      },
+      {
+        "route": 630,
+        "stop": 61,
+        "arrival time": 1542406834.39018,
+        "departure time": 1542406848.908254
+      },
+      {
+        "route": 630,
+        "stop": 29,
+        "arrival time": 1542406912.065268,
+        "departure time": 1542406913.383683
+      },
+      {
+        "route": 630,
+        "stop": 16,
+        "arrival time": 1542407141.958325,
+        "departure time": 1542407309.998655
+      },
+      {
+        "route": 630,
+        "stop": 60,
+        "arrival time": 1542407593.571518,
+        "departure time": 1542407618.693743
+      },
+      {
+        "route": 630,
+        "stop": 62,
+        "arrival time": 1542407735.519548,
+        "departure time": 1542407757.90036
+      },
+      {
+        "route": 630,
+        "stop": 9,
+        "arrival time": 1542407841.307077,
+        "departure time": 1542407865.3662
+      },
+      {
+        "route": 630,
+        "stop": 8,
+        "arrival time": 1542407938.275973,
+        "departure time": 1542407955.351012
+      },
+      {
+        "route": 630,
+        "stop": 24,
+        "arrival time": 1542408102.528781,
+        "departure time": 1542408114.374922
+      },
+      {
+        "route": 630,
+        "stop": 29,
+        "arrival time": 1542408247.381211,
+        "departure time": 1542408272.495464
+      },
+      {
+        "route": 630,
+        "stop": 16,
+        "arrival time": 1542408459.340475,
+        "departure time": 1542408511.26375
+      },
+      {
+        "route": 630,
+        "stop": 60,
+        "arrival time": 1542408791.292532,
+        "departure time": 1542408809.021614
+      },
+      {
+        "route": 630,
+        "stop": 12,
+        "arrival time": 1542408863.283319,
+        "departure time": 1542408879.223395
+      },
+      {
+        "route": 630,
+        "stop": 9,
+        "arrival time": 1542409042.412061,
+        "departure time": 1542409059.278149
+      },
+      {
+        "route": 630,
+        "stop": 8,
+        "arrival time": 1542409131.277989,
+        "departure time": 1542409143.160879
+      },
+      {
+        "route": 630,
+        "stop": 24,
+        "arrival time": 1542409354.299704,
+        "departure time": 1542409369.909047
+      },
+      {
+        "route": 630,
+        "stop": 29,
+        "arrival time": 1542409499.345788,
+        "departure time": 1542409531.222893
+      },
+      {
+        "route": 630,
+        "stop": 16,
+        "arrival time": 1542409647.240902,
+        "departure time": 1542409776.849754
+      },
+      {
+        "route": 630,
+        "stop": 60,
+        "arrival time": 1542410018.906616,
+        "departure time": 1542410040.860793
+      },
+      {
+        "route": 630,
+        "stop": 12,
+        "arrival time": 1542410078.239532,
+        "departure time": 1542410088.264843
+      },
+      {
+        "route": 630,
+        "stop": 62,
+        "arrival time": 1542410140.927339,
+        "departure time": 1542410191.979634
+      },
+      {
+        "route": 630,
+        "stop": 9,
+        "arrival time": 1542410261.218837,
+        "departure time": 1542410300.062865
+      },
+      {
+        "route": 630,
+        "stop": 8,
+        "arrival time": 1542410353.222737,
+        "departure time": 1542410373.159026
+      },
+      {
+        "route": 630,
+        "stop": 24,
+        "arrival time": 1542410517.259503,
+        "departure time": 1542410525.249855
+      },
+      {
+        "route": 630,
+        "stop": 29,
+        "arrival time": 1542410648.97725,
+        "departure time": 1542410666.217813
+      },
+      {
+        "route": 630,
+        "stop": 16,
+        "arrival time": 1542410825.273892,
+        "departure time": 1542410986.228462
+      },
+      {
+        "route": 630,
+        "stop": 60,
+        "arrival time": 1542411190.177029,
+        "departure time": 1542411198.363385
+      },
+      {
+        "route": 630,
+        "stop": 12,
+        "arrival time": 1542411249.77158,
+        "departure time": 1542411258.238905
+      },
+      {
+        "route": 630,
+        "stop": 9,
+        "arrival time": 1542411421.249657,
+        "departure time": 1542411443.160492
+      },
+      {
+        "route": 630,
+        "stop": 8,
+        "arrival time": 1542411516.175545,
+        "departure time": 1542411567.008859
+      },
+      {
+        "route": 630,
+        "stop": 61,
+        "arrival time": 1542411799.224423,
+        "departure time": 1542411842.611054
+      },
+      {
+        "route": 630,
+        "stop": 29,
+        "arrival time": 1542411895.176857,
+        "departure time": 1542412017.84466
+      }
+    ],
+    "441": [
+      {
+        "route": 632,
+        "stop": 72,
+        "arrival time": 1542404491.392755,
+        "departure time": 1542404497.284982
+      },
+      {
+        "route": 632,
+        "stop": 22,
+        "arrival time": 1542404559.293635,
+        "departure time": 1542404607.311347
+      },
+      {
+        "route": 632,
+        "stop": 72,
+        "arrival time": 1542404765.725733,
+        "departure time": 1542404793.304383
+      },
+      {
+        "route": 632,
+        "stop": 22,
+        "arrival time": 1542404963.018958,
+        "departure time": 1542405075.138764
+      },
+      {
+        "route": 632,
+        "stop": 72,
+        "arrival time": 1542405325.290934,
+        "departure time": 1542405347.023158
+      },
+      {
+        "route": 632,
+        "stop": 22,
+        "arrival time": 1542405511.86601,
+        "departure time": 1542406203.362996
+      },
+      {
+        "route": 632,
+        "stop": 72,
+        "arrival time": 1542406445.341139,
+        "departure time": 1542406471.305791
+      },
+      {
+        "route": 632,
+        "stop": 22,
+        "arrival time": 1542406641.999695,
+        "departure time": 1542406756.257129
+      },
+      {
+        "route": 632,
+        "stop": 72,
+        "arrival time": 1542407009.297722,
+        "departure time": 1542407035.360684
+      },
+      {
+        "route": 632,
+        "stop": 22,
+        "arrival time": 1542407206.036747,
+        "departure time": 1542407395.981994
+      },
+      {
+        "route": 632,
+        "stop": 72,
+        "arrival time": 1542407593.572576,
+        "departure time": 1542407597.310782
+      },
+      {
+        "route": 632,
+        "stop": 22,
+        "arrival time": 1542407761.366245,
+        "departure time": 1542407869.259906
+      },
+      {
+        "route": 632,
+        "stop": 72,
+        "arrival time": 1542408113.892552,
+        "departure time": 1542408113.892572
+      },
+      {
+        "route": 632,
+        "stop": 22,
+        "arrival time": 1542408342.313699,
+        "departure time": 1542408342.313719
+      },
+      {
+        "route": 632,
+        "stop": 72,
+        "arrival time": 1542408600.954272,
+        "departure time": 1542408615.285367
+      },
+      {
+        "route": 632,
+        "stop": 22,
+        "arrival time": 1542408911.237797,
+        "departure time": 1542409043.280914
+      },
+      {
+        "route": 632,
+        "stop": 72,
+        "arrival time": 1542409290.329837,
+        "departure time": 1542409307.202531
+      },
+      {
+        "route": 632,
+        "stop": 22,
+        "arrival time": 1542409481.999374,
+        "departure time": 1542409563.256764
+      },
+      {
+        "route": 632,
+        "stop": 72,
+        "arrival time": 1542409745.17386,
+        "departure time": 1542409761.684752
+      },
+      {
+        "route": 632,
+        "stop": 22,
+        "arrival time": 1542409936.304517,
+        "departure time": 1542410056.248634
+      },
+      {
+        "route": 632,
+        "stop": 72,
+        "arrival time": 1542410289.383121,
+        "departure time": 1542410309.158397
+      },
+      {
+        "route": 632,
+        "stop": 22,
+        "arrival time": 1542410565.253482,
+        "departure time": 1542411174.146275
+      },
+      {
+        "route": 632,
+        "stop": 72,
+        "arrival time": 1542411473.169193
+      }
+    ]
+  }
+}

@@ -1,0 +1,91 @@
+{
+  "date": "2018-11-16",
+  "buses": {
+    "401": [
+      {
+        "route": 622,
+        "stop": 36,
+        "arrival time": 1542404024.040512
+      }
+    ],
+    "405": [
+      {
+        "route": 656,
+        "stop": 22,
+        "arrival time": 1542404024.041665,
+        "departure time": 1542404031.936382
+      }
+    ],
+    "422": [
+      {
+        "route": 628,
+        "stop": 35,
+        "arrival time": 1542404024.042663,
+        "departure time": 1542404039.954541
+      }
+    ],
+    "424": [
+      {
+        "route": 627,
+        "stop": 34,
+        "arrival time": 1542404024.043675,
+        "departure time": 1542404027.973122
+      }
+    ],
+    "427": [
+      {
+        "route": 625,
+        "stop": 36,
+        "arrival time": 1542404024.044709,
+        "departure time": 1542404031.937163
+      }
+    ],
+    "429": [
+      {
+        "route": 624,
+        "stop": 28,
+        "arrival time": 1542404024.045885,
+        "departure time": 1542404043.955405
+      }
+    ],
+    "430": [
+      {
+        "route": 626,
+        "stop": 36,
+        "arrival time": 1542404024.046832,
+        "departure time": 1542404027.973908
+      }
+    ],
+    "432": [
+      {
+        "route": 629,
+        "stop": 24,
+        "arrival time": 1542404024.047763,
+        "departure time": 1542404027.97495
+      }
+    ],
+    "433": [
+      {
+        "route": 631,
+        "stop": 37,
+        "arrival time": 1542404024.048686,
+        "departure time": 1542404031.938312
+      }
+    ],
+    "440": [
+      {
+        "route": 630,
+        "stop": 9,
+        "arrival time": 1542404024.051792,
+        "departure time": 1542404027.976099
+      }
+    ],
+    "441": [
+      {
+        "route": 632,
+        "stop": 22,
+        "arrival time": 1542404024.053491
+      }
+    ]
+  }
+}
