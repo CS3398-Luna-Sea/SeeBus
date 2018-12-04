@@ -56,7 +56,7 @@ class BusTracker:
         while True:
             self.update_buses()
             pprint.pprint(self.__buses)
-            print(len(self.__buses))
+            print(len(self.__buses), "buses active")
             time.sleep(self.__delay)
 
     def calculate_speeds(self):

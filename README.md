@@ -1,7 +1,5 @@
 # SeeBus
-
-## Steps to Run Backend Code
-*This tutorial assumes you already have pip and (if you wish) a means of creating virtual environments installed on your machine. If you do not, this tutorial can help*
+*This tutorial assumes you already have Python 3, pip and (if you wish) a means of creating virtual environments installed on your machine. If you do not, [this tutorial](https://virtualenvwrapper.readthedocs.io/en/latest/install.html) can help*
 
 Clone the repository to your machine and navigate to the root directory of our project.
 ```bash
@@ -13,31 +11,40 @@ Install all the necessary python packages (it is recommended that you do so in a
 pip install -r requirements.txt
 ```
 
-To see a table of all the currently active buses shown in the command line, run the BusTracker class.
+To poll the DoubleMap API for bus ETAs (not yet implemented in our website), run
 ```bash
-python backend/monitor_cl.py
+python backend/poll_api.py
 ```
 
-To see a simple locally hosted web page of all the currently active buses, run the Flask application.
+To see raw information from the DoubleMap API of currently active buses in the command line, run
 ```bash
-python frontend/see_bus.py
+python backend/bus_tracker.py
 ```
-Then navigate to [`localhost:5000`](localhost:5000).
 
-## Steps to see frontend
-Navigate to [`54.146.186.245`](http://54.146.186.245).
-Soon, our domain name SeeBus.net will be connected to the IP.
+To see our website, navigate to [seebus.net](https://seebus.net) and accept any warnings about site security (our site is safe, but the HTTPS certificate is not recognized because we did not pay for it).
+
+To see information about us, click the [about](https://seebus.net/about.html) button on the sidebar.
+
+To see the live list of buses, click the [data](https://data.seebus.net) button on the sidebar. We did not have time for formatting or cleaning of the table. All of the information we have calculated on the buses is displayed.
+
+## Features / Accomplishments by Team Member
+* Zach
+* Chris
+* Miguel
 
 
 ## Next Steps
 * Zach
-    * Research how to integrate the Flask app with our server.
-    * Assist Chris and Miguel in tying together all the individual pieces of our project.
-    * Review all code and put refactor and document it.
 * Chris
-    * Get Domain Name connected to server.
-    * Integrate SeeBus live data stream into Frontend
-    * Show live bus locations on Google Map
 * Miguel
-  * Get example database up and running
-  * Begin saving bus data into database for use in statistics calculations later
+
+## Retrospective Notes
+* What went well for the team?
+    * 
+    * 
+    * 
+    * 
+* What might be impeding us from performing better?
+    * 
+* What can we do to improve?
+    * 
