@@ -17,6 +17,7 @@ def get_buses():
         pass
         return {}
 
+
 def get_stops():
     """ Returns a dict of stops indexed by id. """
     stops = {}
@@ -30,9 +31,11 @@ def get_stops():
 
     return stops
 
+
 def stop_info(self, stop_id):
         """ Get information about a specific stop id. """
         return self.stops[stop_id]
+
 
 def get_routes():
         """ Returns a dict of routes indexed by id. Only returns active routes """
@@ -46,6 +49,7 @@ def get_routes():
             routes_dict[route['id']] = route_info
 
         return routes_dict
+
 
 def eta(stop_id, route_id):
         """ Get eta (in minutes) about a specific stop id and route_id. """
@@ -70,6 +74,7 @@ def get_buses_on_route(route):
     on_route = [bus for bus in buses if bus['route'] == route]
     return on_route
 
+
 def select_location(stops):
     """ Prompt the user for a location and return the stop_id. """
     for stop_id, stop in stops.items():
@@ -80,6 +85,7 @@ def select_location(stops):
         pass
 
     return int(stop_input)
+
 
 def find_route(routes, start, finish):
     """ Find which route the user should take. """
@@ -97,6 +103,7 @@ def find_route(routes, start, finish):
     else:
         print("No possible route.")
         return -1
+
 
 if __name__ == "__main__":
     buses = get_buses()
