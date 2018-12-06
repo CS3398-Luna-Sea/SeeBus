@@ -34,37 +34,38 @@ python backend/bus_tracker.py
 ## Features / Accomplishments by Team Member
 * Zach
     * Wrote classes:
-        * [`Bus`](backend/bus.py)
-        * [`BusTracker`](backend/bus_tracker.py)
-        * [`DisplayCommandLine`](backend/monitor_cl.py)
-        * [`Saver`](backend/saver.py)
-        * [`TestBus`](test/test_bus.py)
-        * [`TestPollAPI`](test/test_poll_api.py)
+        * [`Bus`](backend/bus.py) - manages information about a single bus (id, location, heading, speed, etc)
+        * [`BusTracker`](backend/bus_tracker.py) - periodically polls the DoubleMap API to maintain a list of `Bus` objects as well as calculate their speeds and other valuable information.
+        * [`DisplayCommandLine`](backend/monitor_cl.py) - uses a `BusTracker` object to display information about the buses in the command line in real time.
+        * [`Saver`](backend/saver.py) - constantly runs in the background on our server and collects arrival and departure times in JSON format when each bus makes a stop.
+        * [`TestBus`](test/test_bus.py) - contains unit tests for the [`Bus`](backend/bus.py) class.
+        * [`TestPollAPI`](test/test_poll_api.py) - contains unit tests for functions I wrote in [`poll_api.py`](backend/poll_api.py).
     * Wrote files:
-        * [`translate.py`](backend/translate.py)
-        * [`see_bus.py`](frontend/see_bus.py)
-        * [`buses.html`](frontend/templates/buses.html)
-        * [`index.html`](frontend/templates/index.html)
+        * [`translate.py`](backend/translate.py) - translates stop and route IDs from the DoubleMap API into useful information such as route/stop name, route type, and route number.
+        * [`see_bus.py`](frontend/see_bus.py) - a Flask app that serves a dynamic webpage containing a table of information about currently active buses in real time.
+        * [`buses.html`](frontend/templates/buses.html) - the template for table of buses used by the Flask app.
+        * [`index.html`](frontend/templates/index.html) - the template used for the main page of the Flask app when it runs locally.
     * Wrote functions:
-        * [`poll_api.get_buses()`](backend/poll_api.py)
-        * [`poll_api.get_buses_on_route()`](backend/poll_api.py)
+        * [`poll_api.get_buses()`](backend/poll_api.py) - polls the DoubleMap API for currently active buses.
+        * [`poll_api.get_buses_on_route()`](backend/poll_api.py) - polls the DoubleMap API for currently active buses and returns those on a specified route.
 * Chris
-    * Set up Ubuntu AWS server infrastructure and access.
-    * Set up server to handle incoming web requests.
-    * Configured [`nginx`](misc/niginx.conf).
-    * Set up domain name routing [seebus.net](https://seebus.net).
-    * Created [`landing page`](index.html) page with a dynamic GoogleMap.
-    * Created [`about page`](frontend/about.html).
-    * Integrated output from [`see_bus.py`](frontend/see_bus.py) to [`data page`](index.html).
+    * Set up server infrastructure and access
+        * Set up Ubuntu AWS server that runs 24/7 hosting our website.
+        * Set up server to handle incoming web requests.
+        * Configured [`nginx`](misc/niginx.conf) to serve static and dynamic webpages over HTTP and HTTPS.
+        * Routed our domain name [seebus.net](https://seebus.net) to our server IP [54.146.186.245](https://54.146.186.245/).
+    * Coordinated frontend development.
+        * Created [`landing page`](index.html) page with a dynamic GoogleMap, the main page of our website.
+        * Created [`about page`](frontend/about.html) with information about us, the developers.
+        * Integrated output from [`see_bus.py`](frontend/see_bus.py) to [`data page`](index.html).
 * Miguel
     * Wrote code in [`Saver`](backend/saver.py) to allow for saving bus data in a database.
     * Added functions in [`poll_api.py`](backend/poll_api.py):
-        * [`get_stops()`](backend/poll_api.py)
-        * [`stop_info()`](backend/poll_api.py)
-        * [`get_routes()`](backend/poll_api.py)
-        * [`eta()`](backend/poll_api.py)
-        * [`select_location`](backend/poll_api.py)
-        * [`find_route()`](backend/poll_api.py)
+        * [`get_stops()`](backend/poll_api.py) - polls the DoubleMap API for a list of stops currently serviced by Texas State.
+        * [`get_routes()`](backend/poll_api.py) - polls the DoubleMap API for a list of routes currently ran by Texas State.
+        * [`eta()`](backend/poll_api.py) - polls the DoubleMap API for an estimated time of arrival for a given stop on a given route.
+        * [`select_location()`](backend/poll_api.py) - prompts the user to choose a stop when [`poll_api.py`](backend/poll_api.py) is used in the command line.
+        * [`find_route()`](backend/poll_api.py) - finds the route with a corresponding begin and finish stop entered by the user.
     * Wrote [`routeCalculator.py`](backend/routeCalculator.py) class.
 
 

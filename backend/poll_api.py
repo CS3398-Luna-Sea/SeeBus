@@ -31,11 +31,6 @@ def get_stops():
     return stops
 
 
-def stop_info(self, stop_id):
-        """ Get information about a specific stop id. """
-        return self.stops[stop_id]
-
-
 def get_routes():
         """ Returns a dict of routes indexed by id. Only returns active routes """
         routes_dict = {}
@@ -122,12 +117,3 @@ if __name__ == "__main__":
         print("The %s bus will arrive in %s minute(s)." % (bus_name, bus_arrive_time))
     else:
         print("A single route cannot be taken.")
-
-
-    #pprint.pprint(stops)
-    # routes = get_routes()
-    # pprint.pprint(routes)
-    # pprint.pprint(stops)
-    # buses = get_buses_on_route(617)
-    # pprint.pprint(buses)
-    # pprint.pprint(get_buses_on_route()
