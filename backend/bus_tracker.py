@@ -43,7 +43,7 @@ class BusTracker:
             last_update = raw_bus['lastUpdate']
 
             b = Bus(id, name=name, route=route, location=location, heading=heading, speed=speed,
-                        last_stop=last_stop, last_update=last_update)
+                    last_stop=last_stop, last_update=last_update)
             self.__buses.append(b)
 
         self.__buses.sort(key=lambda x: x.get_id())

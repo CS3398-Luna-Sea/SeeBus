@@ -1,3 +1,8 @@
+"""
+Contains dictionaries to translate a route or stop ID from the DoubleMap API to a dictionary containing information
+about the route/stop.
+"""
+
 route_id_dict = {
     613: {
         'txst_id': 56,
@@ -217,7 +222,7 @@ stop_id_dict = {
         'name': 'Edge'
     },
     10: {
-        'name': 'Elevation (The Outpost???)'
+        'name': 'Elevation'
     },
     11: {
         'name': 'Heights II'

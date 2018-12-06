@@ -19,6 +19,9 @@ class Saver:
         self.__timezone = timezone
 
     def loop(self):
+        """
+        Constantly runs and saves a JSON file with bus data once each day.
+        """
         should_save = False
         try:
             while True:
@@ -40,6 +43,9 @@ class Saver:
             quit(0)
 
     def __update_data(self):
+        """
+        Updates the buses and the data collected regarding their arrival and departure times.
+        """
         self.__bt.update_buses()
 
         for bus in self.__bt.get_buses():
@@ -50,7 +56,8 @@ class Saver:
             if id not in self.__buses:
                 self.__buses[id] = {
                     'stop': None,
-                    'speed': None
+                    'speed': None,
+                    'stop flag': False
                 }
                 self.__data["buses"][id] = []
 
@@ -61,7 +68,7 @@ class Saver:
             if bus.is_stopped() and curr_stop != prev_stop:
                 try:
                     print('{} on {} arrived at {}'.format(id, translate.route_id_dict[bus.get_route()]['name'],
-                                                                 translate.stop_id_dict[curr_stop]['name']))
+                                                          translate.stop_id_dict[curr_stop]['name']))
                 except KeyError:
                     pass
                 # Add timestamp to data
@@ -83,12 +90,15 @@ class Saver:
                 self.__data["buses"][id][-1]['departure time'] = datetime.now().timestamp()
                 try:
                     print('{} on {} leaving {}'.format(id, translate.route_id_dict[bus.get_route()]['name'],
-                                                                 translate.stop_id_dict[curr_stop]['name']))
+                                                       translate.stop_id_dict[curr_stop]['name']))
                 except KeyError:
                     pass
                 self.__buses[id]['stop flag'] = False
 
     def __save(self):
+        """
+        Saves a JSON file with the bus data with a unique filename.
+        """
         filename = 'backend/bus_data/data{}.json'.format(datetime.now().timestamp())
         with open(filename, 'w+') as f:
             f.write(json.dumps(self.__data, indent=2))
