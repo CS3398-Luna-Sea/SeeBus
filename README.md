@@ -1,8 +1,12 @@
 # SeeBus
+SeeBus is a web application for viewing real time information about the Texas State Shuttle buses.
+
+
+## Using SeeBus
 *This tutorial is for a linux environment and assumes you already have Python 3, pip and (if you wish) a means of creating virtual environments installed on your machine. If you do not, [this tutorial](https://virtualenvwrapper.readthedocs.io/en/latest/install.html) can help*
 
 
-## Our Website
+### Our Website
 To see our website, navigate to [seebus.net](https://seebus.net) and accept any warnings about site security (our site is safe, but the HTTPS certificate is not recognized because we did not pay for it).
 
 To see information about us, click the [about](https://seebus.net/about.html) button on the sidebar.
@@ -10,7 +14,16 @@ To see information about us, click the [about](https://seebus.net/about.html) bu
 To see the live list of buses, click the [data](https://data.seebus.net) button on the sidebar. We did not have time for formatting or cleaning of the table. All of the information we have calculated on the buses is displayed.
 
 
-## Backend Code
+### Frontend Code
+To see the live list of buses locally, run
+```bash
+python frontend/see_bus.py
+```
+And navigate to [localhost:5000](localhost:5000) in your browser.
+*Note: the links on the sidebar of the locally hosted website will take you to our remotely hosted website, not to locally hosted versions of the files.*
+
+
+### Backend Code
 Clone the repository to your machine and navigate to the root directory of our project.
 ```bash
 git clone https://github.com/CS3398-Luna-Sea/SeeBus && cd SeeBus
@@ -31,7 +44,8 @@ To see raw information from the DoubleMap API of currently active buses in the c
 python backend/bus_tracker.py
 ```
 
-## Features / Accomplishments by Team Member
+## Final Retrospective
+### Features / Accomplishments by Team Member
 * Zach
     * Wrote classes:
         * [`Bus`](backend/bus.py) - manages information about a single bus (id, location, heading, speed, etc)
@@ -69,7 +83,7 @@ python backend/bus_tracker.py
     * Wrote [`routeCalculator.py`](backend/routeCalculator.py) class.
 
 
-## Measurable Improvements from Sprint 2
+### Measurable Improvements from Sprint 2
 * *Chris: I need to get better with github commands. I was pushing directly to the master branch at a few points, instead of checking out and pushing to the dev branch.*
     * Since last sprint, I have been much more disciplined with working in the `dev` branch instead of committing straight to master. I have also worked on tasks that others are dependent on first, in order to minimize their hold ups. 
 * *Miguel: Set aside more time to work on the assignment. Communicate more effectively what I don't know and do know. In addition we could use our bi-weekly meetings to do a code review to display progress and provide feedback to team members.*
@@ -80,7 +94,7 @@ python backend/bus_tracker.py
     * Since my work in sprint 3 was mostly focused documenting/refactoring code and assisting my teammates in finishing their features, I did not have much to inform them about. However, we did communicate better as a team.
 
 
-## Next Steps
+### Next Steps
 * Zach
     * Fix bugs in [`Saver`](backend/saver.py) that cause it to unexpectedly crash. Should be able to constantly run in the background with no issues.
     * Explore DoubleMap API further to see what other features are possible.
@@ -94,7 +108,7 @@ python backend/bus_tracker.py
     * Display ETAs on the website.
 
 
-## Retrospective Notes
+### Retrospective Notes
 What went well for the team?
 * We have all learned a lot throughout the project and were good at solving problems as they came up.
 * We created a minimal viable product that is semi-useful in real life situations.
